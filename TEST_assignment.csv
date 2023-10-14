@@ -1,0 +1,5 @@
+project_id,project_title,auth_1_email,auth_2_email,auth_3_email,auth_4_email,publish,pr_exemption
+001,Fantasy Ice Hockey Lineup Decisions with Q-Learning and SARSA,jaredssm@stanford.edu,,,,1,0
+002,Optimal Policy for Uber/Lyft drivers in the Bay Area,ndlovutv@stanford.edu,krmkuran@stanford.edu,,,1,1
+003,Twenty-Twenty Learning: A 2048 solver powered by Deep Q-Networks,willzli@stanford.edu,sjaladi@stanford.edu,absinha@stanford.edu,,1,0
+004,Fantasy Ice Hockey Lineup Decisions with Q-Learning and SARSA,jaredssm@stanford.edu,,,,1,0
