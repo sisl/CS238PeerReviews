@@ -6,4 +6,6 @@ Repo that contains all the files for handling the peer reviews for the CS238 fin
 - processed_peer_reviews
 - publishable_reports
 
+After downloading the data from Gradescope, run 'organize_data.py' to get the data into the correct format.
+
 All the code for the peer review assignment and also for returning the peer reviews to the project authors can be found in 'parse_data.py'.
