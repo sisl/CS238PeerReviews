@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 from glob import glob
 from copy import copy
 import shutil
@@ -9,15 +10,17 @@ import sys
 import yaml
 from PyPDF2 import PdfWriter, PdfReader
 sys.setrecursionlimit(300000)
-random.seed(227)
+random.seed(8241)
 
-roster_filename = "updated_AA228_Fall_2023_roster.csv" #TODO: remember to change
-projects_filename = "/Users/jennyyang/Downloads/organized_submissions/real_updated_csvfile.csv"
+roster_filename = "AA228_Fall_2024_roster.csv" 
+projects_filename = "updated_csvfile.csv"
 
 class Student(object):
-    def __init__(self,first_name,last_name,sid,email,section) -> None:
-        self.first_name = first_name
-        self.last_name = last_name
+    # def __init__(self,first_name,last_name,sid,email,section) -> None:   
+    def __init__(self,name,sid,email,section) -> None:
+        # self.first_name = first_name
+        # self.last_name = last_name
+        self.name = name
         self.sid = sid
         self.email = email
         self.section = section
@@ -25,8 +28,9 @@ class Student(object):
         self.peer_review_2 = None
 
     def __str__(self):
-        print(f"First Name: {self.first_name}")
-        print(f"Last Name: {self.last_name}")
+        # print(f"First Name: {self.first_name}")
+        # print(f"Last Name: {self.last_name}")
+        print(f"Name: {self.name}")
         print(f"sid: {self.sid}")
         print(f"Email: {self.email}")
         # print(f"Peer Review 1: {self.peer_review_1}")
@@ -48,13 +52,13 @@ class Project(object):
     def __str__(self):
         print(f"Project ID: {self.project_id}")
         print(f"filename: {self.filename}")
-        print(f"Author 1: {self.auth_1.first_name} {self.auth_1.last_name}")
+        print(f"Author 1: {self.auth_1.name}")
         if self.auth_2 is not None:
-            print(f"Author 2: {self.auth_2.first_name} {self.auth_2.last_name}")
+            print(f"Author 2: {self.auth_2.name}")
         if self.auth_3 is not None:
-            print(f"Author 3: {self.auth_3.first_name} {self.auth_3.last_name}")
+            print(f"Author 3: {self.auth_3.name}")
         if self.auth_4 is not None:
-            print(f"Author 4: {self.auth_4.first_name} {self.auth_4.last_name}")
+            print(f"Author 4: {self.auth_4.name}")
         print(f"Permission to publish: {self.permission_to_publish}")
         print(f"Peer Review Exemption: {self.pr_exemption}")
         return ""
@@ -68,7 +72,7 @@ class PeerReview(object):
     def __str__(self):
         print(f"filename: {self.filename}")
         print(f"Project: {self.project.title}")
-        print(f"Author: {self.auth.first_name} {self.auth.last_name}")
+        print(f"Author: {self.auth.name}")
         return ""
 
 
@@ -76,12 +80,12 @@ def get_student_list():
     student_list = []
     df = pd.read_csv(roster_filename)
     for i in range(len(df)):
-        first_name = df.iloc[i]["First Name"]
-        last_name = df.iloc[i]["Last Name"]
+        name = df.iloc[i]["Name"]
+        print(name)
         sid = str(int(df.iloc[i]["SID"]))
         email = df.iloc[i]["Email"]
         section = df.iloc[i]["Section"]
-        student_list.append(Student(first_name,last_name,sid,email,section))
+        student_list.append(Student(name,sid,email,section))
     
     return student_list
 
@@ -164,8 +168,8 @@ def get_projects_list(students_list):
         s4 = find_student_by_email(auth_4_email,students_list)
 
         #find file
-        res = glob("/Users/jennyyang/Downloads/organized_submissions/"+project_id+"*")
-        
+        res = glob(os.path.expanduser(os.path.join('~/Github/CS238PeerReviews/organized_submissions/', project_id + '*')))
+
         # if project_id=="136":
         #     filename = None
         if len(res) != 1:
@@ -199,7 +203,7 @@ def get_peer_review_list(student_list, projects_list, pr_metadata,peer_review_nu
 def assign_peer_reviews(student_list,projects_list):
     """
     Avoid:
-    - not same assignemnt twice
+    - not same assignment twice
     - not own project
     """
     print("pre filter length of projects", len(projects_list))
@@ -317,7 +321,7 @@ def helper_check_not_self_assigned(student_list, projects_list):
                 s_project = p.project_id
         
         if s_project == s_peer_review_1 or s_project == s_peer_review_2:
-            print(f'{s.id} is reviewing their own project. {s_project} {s_peer_review_1} {s_peer_review_2}')
+            print(f'{s.sid} is reviewing their own project. {s_project} {s_peer_review_1} {s_peer_review_2}')
         if s_peer_review_1 == s_peer_review_2:
             print(f'{s.sid} is reviewing the same project twice...')
         # print(f"{s.sid} {s_project} {s_peer_review_1} {s_peer_review_2}")
@@ -334,9 +338,9 @@ def write_peer_review_assignments(student_list):
             "Peer Review 2 Title": peer_review_2_title,
             "Peer Review 2 Filename": peer_review_2_filename}
     df = pd.DataFrame(dict)
-    df.to_csv("Peer_review_assignemnts.csv",index=False)
+    df.to_csv("Peer_review_assignments.csv",index=False)
 
-def write_peer_review_projects(pr1_list,pr2_list,projects_list):
+def  write_peer_review_projects(pr1_list,pr2_list,projects_list):
     project_titles = []
     project_ids = []
     peer_review_filenames = []
@@ -356,12 +360,13 @@ def write_peer_review_projects(pr1_list,pr2_list,projects_list):
         peer_review_files = []
         for pr in pr1_list:
             if pr.project == p:
-                peer_review_files.append("/Users/jennyyang/Downloads/assignment_3790759_export_PR1/"+pr.filename)
+                peer_review_files.append(os.path.expanduser("~/Github/CS238PeerReviews/export_PR1/" + pr.filename))
                 peer_review_list.append(pr)
 
         for pr in pr2_list:
             if pr.project == p:
-                peer_review_files.append("/Users/jennyyang/Downloads/assignment_3790761_export_PR2/"+pr.filename)
+                peer_review_files.append(os.path.expanduser("~/Github/CS238PeerReviews/export_PR2/" + pr.filename))
+
                 peer_review_list.append(pr)
         
         #write pdf
@@ -390,7 +395,7 @@ def write_permission_to_publish(projects_list):
         if p.permission_to_publish:
             
             #copy files
-            f = glob("/Users/jennyyang/Downloads/organized_submissions/"+p.project_id+"*")
+            f = glob(os.path.expanduser("~/Github/CS238PeerReviews/organized_submissions/" + p.project_id + "*"))
             if len(f) == 0:
                 #cannot publish if not part of peer review
                 continue
@@ -421,7 +426,7 @@ def search_pr_by_filename(filename,pr_list,student_list):
 
 def write_master_peer_review_assignments(student_list):
     sids = [s.sid for s in student_list]
-    names = [s.first_name+" "+s.last_name for s in student_list]
+    names = [s.name for s in student_list]
     emails = [s.email for s in student_list]
     peer_review_1_title = [s.peer_review_1.title for s in student_list]
     peer_review_1_filename = [s.peer_review_1.filename for s in student_list]
@@ -435,7 +440,7 @@ def write_master_peer_review_assignments(student_list):
             "Peer Review 2 Title": peer_review_2_title,
             "Peer Review 2 Filename": peer_review_2_filename}
     df = pd.DataFrame(dict)
-    df.to_csv("Peer_review_assignemnts_master.csv",index=False)
+    df.to_csv("Peer_review_assignments_master.csv",index=False)
 
 def save_assignments(student_list, projects_list,filename):
     dict = {"student_list":student_list, "projects_list":projects_list}
@@ -496,7 +501,7 @@ def run_second():
     write_permission_to_publish(projects_list)
     print("stop")
 
-# run_second()
+run_second()
 
 
 
@@ -538,7 +543,7 @@ def run_third():
     pr2_list = get_peer_review_list(student_list,projects_list,pr2_metadata,2)
     write_peer_review_projects(pr1_list, pr2_list, projects_list)
 
-run_third()
+# run_third()
 
 # write_permission_to_publish(projects_list)
 # print("stop")

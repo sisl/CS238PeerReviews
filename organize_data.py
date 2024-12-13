@@ -3,14 +3,14 @@ import pandas as pd
 import shutil
 
 # Load the CSV file
-csv_file = '/Users/jennyyang/Downloads/final_submissions/submission_metadata.csv'  # Replace with your CSV file path
+csv_file = 'submission_metadata.csv'  # Replace with your CSV file path
 df = pd.read_csv(csv_file)
 
 df['Submission ID'] = df['Submission ID'].dropna().astype(int).astype(str)
 df = df.dropna(subset=['Submission ID'])
 
 # Create a new folder for the moved files
-new_folder = '/Users/jennyyang/Downloads/organized_submissions/'  # Replace with the path to the new folder
+new_folder = os.path.expanduser('~/Github/CS238PeerReviews/organized_submissions/')  # Replace with the path to the new folder
 os.makedirs(new_folder, exist_ok=True)
 
 # Iterate over the DataFrame
@@ -20,7 +20,7 @@ for i, row in df.iterrows():
     if submission_id in submission_id_to_new_filename.keys():
         continue
     folder_name = f'submission_{submission_id}'
-    folder_path = os.path.join('/Users/jennyyang/Downloads/final_submissions', folder_name)  # Replace with the path to the submission folders
+    folder_path = os.path.expanduser(os.path.join('~/Github/CS238PeerReviews/final_submissions', folder_name))  # Replace with the path to the submission folders
 
     # Find the file in the folder
     if os.path.exists(folder_path) and os.path.isdir(folder_path):
@@ -48,4 +48,4 @@ print(submission_id_to_new_filename)
 
 # Add the new filenames to the DataFrame and save the updated CSV
 df['project_id'] = df['Submission ID'].map(submission_id_to_new_filename)
-df.to_csv('/Users/jennyyang/Downloads/organized_submissions/updated_csvfile.csv', index=False)  # Replace with the desired path for the updated CSV
+df.to_csv('updated_csvfile.csv', index=False)  # Replace with the desired path for the updated CSV
