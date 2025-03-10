@@ -8,12 +8,15 @@ import random
 import pickle
 import sys
 import yaml
+from pathlib import Path
 from PyPDF2 import PdfWriter, PdfReader
+
+
 sys.setrecursionlimit(300000)
 random.seed(8241)
 
-roster_filename = "AA228_Fall_2024_roster.csv" 
-projects_filename = "updated_csvfile.csv"
+# roster_filename = "AA228_Fall_2024_roster.csv" 
+projects_filename = "filtered_roster_for_finalprojects.csv"
 
 class Student(object):
     # def __init__(self,first_name,last_name,sid,email,section) -> None:   
@@ -78,46 +81,46 @@ class PeerReview(object):
 
 def get_student_list():
     student_list = []
-    df = pd.read_csv(roster_filename)
+    df = pd.read_csv(projects_filename)
     for i in range(len(df)):
         name = df.iloc[i]["Name"]
         print(name)
-        sid = str(int(df.iloc[i]["SID"]))
+        sid = str(int(df.iloc[i]["Student ID"]))
         email = df.iloc[i]["Email"]
-        section = df.iloc[i]["Section"]
+        section = df.iloc[i]["Sections"]
         student_list.append(Student(name,sid,email,section))
     
     return student_list
 
-def find_student_by_email(email,student_list):
-    student = None
-    if pd.isna(email):
-        return None
-
-    # print('all emails',email)
-    email = email.rstrip()
-
-    for s in student_list:
-        # print(s.email)
-        if s.email==email:
-            student = s
-            return student
-
-    if student is None:
-        # TODO: FIGURE OUT WHAT'S GOING ON HERE.
-        print("email", email)
-        # raise NotImplementedError
-
-# def find_student_by_sid(sid,student_list):
+# def find_student_by_email(email,student_list):
 #     student = None
-#     stripped_sid = str(int(sid))
+#     if pd.isna(email):
+#         return None
+
+#     # print('all emails',email)
+#     email = email.rstrip()
+
 #     for s in student_list:
-#         if s.sid==stripped_sid:
+#         # print(s.email)
+#         if s.email==email:
 #             student = s
 #             return student
 
 #     if student is None:
-#         raise NotImplementedError
+#         # TODO: FIGURE OUT WHAT'S GOING ON HERE.
+#         print("email", email)
+#         # raise NotImplementedError
+
+def find_student_by_sid(sid,student_list):
+    student = None
+    stripped_sid = str(int(sid))
+    for s in student_list:
+        if s.sid==stripped_sid:
+            student = s
+            return student
+
+    if student is None:
+        raise NotImplementedError
     
         
 
@@ -133,52 +136,35 @@ def get_projects_list(students_list):
     df.rename(columns={'Question 2.2 Response': 'auth_2_email'}, inplace=True)
     df.rename(columns={'Question 2.3 Response': 'auth_3_email'}, inplace=True)
     df.rename(columns={'Question 2.4 Response': 'auth_4_email'}, inplace=True)
+    df.rename(columns={'Question 5 Response': 'file_id'}, inplace=True)
 
-    for i in range(len(df)):
-        if pd.isna(df.iloc[i]["project_id"]):
-            continue
+    unique_submission_ids = pd.unique(df["Submission ID"]).tolist()
 
-        project_id = str(int(df.iloc[i]["project_id"])).zfill(3)
-        if project_id in seen_projects:
-            continue
-        project_title = df.iloc[i]["project_title"]
-        if df.iloc[i]["publish"] == "Yes":
-            permission_publish = True
-        else:
-            permission_publish = False
-        if df.iloc[i]["pr_exemption"] == "Yes":
-            pr_exemption = True
-        else:
-            pr_exemption = False
+    project_file_number = 0
 
-        #find_author 1
-        auth_1_email = df.iloc[i]["auth_1_email"]
-        s1 = find_student_by_email(auth_1_email,students_list)
+    for id in unique_submission_ids:
 
-        #find_author 2
-        auth_2_email = df.iloc[i]["auth_2_email"]
-        s2 = find_student_by_email(auth_2_email,students_list)
+        # filter original submissions csv by submission id
+        df_filtered = df[df["Submission ID"] == id]
 
-        #find_author 3
-        auth_3_email = df.iloc[i]["auth_3_email"]
-        s3 = find_student_by_email(auth_3_email,students_list)
+        # get all the student ids in the filtered df
+        student_ids = df_filtered["Student ID"].tolist()
 
-        #find_author 4
-        auth_4_email = df.iloc[i]["auth_4_email"]
-        s4 = find_student_by_email(auth_4_email,students_list)
+        # find students by sid
+        students = [find_student_by_sid(s,students_list) for s in student_ids] + [None] * (4 - len(student_ids))
 
-        #find file
-        res = glob(os.path.expanduser(os.path.join('~/Github/CS238PeerReviews/organized_submissions/', project_id + '*')))
-
-        # if project_id=="136":
-        #     filename = None
-        if len(res) != 1:
-            raise NotImplementedError
-        else:
-            filename = res[0].split("/")[-1]
+        project_titles = df_filtered["project_title"].tolist()[0]
+        publish = df_filtered["publish"].tolist()[0]
+        pr_exemption = df_filtered["pr_exemption"].tolist()[0]
         
-        seen_projects.add(project_id)
-        projects_list.append(Project(project_id,filename,project_title,s1,s2,s3,s4,permission_publish,pr_exemption))
+        # find file from folder called submissions to file "submissions_id"
+        res = glob(Path("./submissions/") / f"submissions_{id}*")
+        assert len(res) == 1
+        filename = res[0]
+
+        project_file_number += 1
+
+        projects_list.append(Project(project_file_number,filename,project_titles,students[0],students[1],students[2],students[3],publish,pr_exemption))
 
     return projects_list
 
@@ -326,12 +312,21 @@ def helper_check_not_self_assigned(student_list, projects_list):
             print(f'{s.sid} is reviewing the same project twice...')
         # print(f"{s.sid} {s_project} {s_peer_review_1} {s_peer_review_2}")
 
-def write_peer_review_assignments(student_list):
+def write_peer_review_assignments(student_list, projects_list):
+    os.makedirs("processed_project_files",exist_ok=True)
+
+    for p in projects_list:
+        if p.pr_exemption:
+            continue
+
+        # copy files and rename to new folder
+        shutil.copy(p.filename,"./processed_project_files/"+f"{str(p.project_id).zfill(3)}.pdf")
+        
     sids = [s.sid for s in student_list]
     peer_review_1_title = [s.peer_review_1.title for s in student_list]
-    peer_review_1_filename = [s.peer_review_1.filename for s in student_list]
+    peer_review_1_filename = [f"{str(s.peer_review_1.project_id).zfill(3)}.pdf" for s in student_list]
     peer_review_2_title = [s.peer_review_2.title for s in student_list]
-    peer_review_2_filename = [s.peer_review_2.filename for s in student_list]
+    peer_review_2_filename = [f"{str(s.peer_review_2.project_id).zfill(3)}.pdf" for s in student_list]
     dict = {"Student ID":sids, 
             "Peer Review 1 Title":peer_review_1_title, 
             "Peer Review 1 Filename":peer_review_1_filename,
@@ -388,26 +383,18 @@ def  write_peer_review_projects(pr1_list,pr2_list,projects_list):
 
 def write_permission_to_publish(projects_list):
     project_titles = []
-    project_ids = []
     project_filenames = []
-    project_set = set(projects_list)
-    for p in project_set:
+
+    os.makedirs("publishable_projects",exist_ok=True)
+    for p in projects_list:
         if p.permission_to_publish:
             
-            #copy files
-            f = glob(os.path.expanduser("~/Github/CS238PeerReviews/organized_submissions/" + p.project_id + "*"))
-            if len(f) == 0:
-                #cannot publish if not part of peer review
-                continue
-            elif len(f) == 1:
-                project_titles.append(p.title)
-                project_ids.append(p.project_id)
-                f = f[0]
-                f_name = f.split("/")[-1]
-                project_filenames.append(f_name)
-                shutil.copy(f,"./publishable_projects/"+f_name)
-            else:
-                raise NotImplementedError
+            # copy files
+            shutil.copy(p.filename,"./publishable_projects/"+f"{str(p.project_id).zfill(3)}.pdf")
+            project_titles.append(p.title)
+            f_name = f"{str(p.project_id).zfill(3)}.pdf"
+            project_filenames.append(f_name)
+
     dict = {"Title":project_titles,
             "Filenames": project_filenames}
     
