@@ -1,0 +1,659 @@
+Student ID,Peer Review 1 Title,Peer Review 1 Filename,Peer Review 2 Title,Peer Review 2 Filename
+6452697,Exploration and Resource Optimization for Autonomous Rover Missions,133.pdf,Q-Learning for the Secretary Problem,267.pdf
+6745949,Managing Power Grids During Hurricanes Using Probabilistic Decision-Making,178.pdf,Autonomous Lunar Landing with Deep Q-Learning,191.pdf
+6605093,Securing Carbon Geological Storage: A Sequential Decision Approach for CO2 Monitoring and Leak Detection,256.pdf,"Attitude Determination and Control for a Spacecraft with
+Unreliable State Measurements",063.pdf
+6541040,SmartConnections: Using Q-Learning to Solve The NYT Connections,009.pdf,"Multi-Robot Navigation Using Sequential Decision
+Making Processes",049.pdf
+6525387,Decision Making Under Uncertainty in Secret Hitler,231.pdf,Optimizing Theme Park Experience Using POMDPs,004.pdf
+6347565,"Kidney Matching: A Reinforcement Learning Approach
+",209.pdf,Over(Q)ooked: Developing Q-Learning Agents for Overcooked,147.pdf
+6456198,Safe Multi-Agent Spacecraft Reconfiguration Under Uncertainty,050.pdf,Lunar Landing,183.pdf
+6380013,AeroAstro Work-Life Balance: How to Maximize Your AA 228 Quiz Scores,012.pdf,RoboDelivery: A Q-Learning Approach to Autonomous Package Distribution,186.pdf
+6745813,Cool Maze Searcher - Reinforcement Learning in 3D Robot Maze Navigation,108.pdf,QRaFT: Quantitative and Risk-Adjusted Framework for Algorithmic Trading,192.pdf
+6778204,Optimal Policies for Competition Power-Off Landings in Varying Wind Conditions with Markov Decision Processes,276.pdf,"Modeling Renewable Energy Transitions as a Markov Decision Process:
+A Q-Learning approach to minimizing fossil-fuel reliance while meeting energy demands",088.pdf
+6742694,Optimizing Decision-Making in Open Face Chinese Poker Using Monte Carlo Tree Search,275.pdf,Navigating the Star Wars: Deep Reinforcement Learning for Competitive Team Battles!,140.pdf
+6743588,Building Renewable Energy Grids using Monte Carlo Tree Search and Karger's Algorithm,163.pdf,"Playing Regicide: Optimal Game Play in Uncertain
+Environments",206.pdf
+6653492,Robust Path-Planning for Autonomous Drones,263.pdf,Stock trading with deep q-learning,130.pdf
+6512040,Solving Plants vs Zombies with Monte Carlo Tree Search,176.pdf,Computational Approaches to Optimize HIV Treatment Strategies Using Synthetic Data,235.pdf
+6509510,Invasive Species,045.pdf,Satellite Task Scheduling using Markov Decision Process,215.pdf
+6420763,Reducing Patient No-Shows through Q-Learning Optimized Scheduling,131.pdf,Exploring Deep Behavioral Cloning with Synthetic Expert Data for 2048,005.pdf
+6481153,Baba Is Who? Using Q-Learning to Categorize Human Learning in a Puzzle Game (almost),251.pdf,A Decision-Making Model of Multi-target Reaching in Motor Neuroscience,106.pdf
+6454620,Guess Who Wins Guess Who?,107.pdf,Modeling Human Behavior in Poker,101.pdf
+6455371,POMDP Navigation performance for Orienteering,081.pdf,What the Heck is Optimal: MCTS and Q-Learning for Strategic Bidding,210.pdf
+6510003,Cracking the Connections Game,078.pdf,To GNN or to LLM? That is a Risk(y) Question,142.pdf
+6453371,Optimized helicopter ambulance routing for stroke patients,072.pdf,Dynamic Frequency Band Selection for Radar Operation in the Presence of Interference,066.pdf
+6622816,Ability of DQN Model to Learn Theory of Mind when Playing Hanabi,071.pdf,Optimizing Electricity Futures Trading with Reinforcement Learning and Deep Learning Driven Price Forecasting,090.pdf
+6456675,Meow-kov Decisions: Reward Functions for an Exploding Kittens MDP,219.pdf,Graph Reinforcement Learning for the Traveling Salesman Problem with Stochastic Travel Times,213.pdf
+6750948,PokerBot,034.pdf,Optimizing Job Applications Under Uncertainty,043.pdf
+6757174,Monadic Hierarchical Planning in Tactical Simulations: A Q-Learning Framework for Strategic Unit Composition and Placement,226.pdf,"""Monkey!"": Blackjack Decision-Making Agent",127.pdf
+6757581,When to Assist and Retrain? Learning Policies for Algorithmic Decision Support,197.pdf,Catan Conqueror: Building Bots to Rule the Island,242.pdf
+6633650,A Love Letter to Game Playing,169.pdf,Mastering Pong with Deep Q-Learning,126.pdf
+6343769,Reinforcement Earning: RL-based Algorithmic Trading,253.pdf,Going Bananas for Uncertainty: Creating a Bananagrams Agent with MCTS,190.pdf
+6855651,Solving Investiture: A Stock Exchange Game,030.pdf,Reinforcement Learning Control of Active Suspension System,044.pdf
+6504277,What the Farkle!?,017.pdf,Connect Four Conundrum,181.pdf
+6603077,Learning Greenification Policies using Markov Decision Processes,095.pdf,Diagnostic Imaging in Radiology: Developing a Deep Learning Decision Support Tool,243.pdf
+6504480,Freshman Year Class Selection as an MDP,224.pdf,"Optimal Regatta Sailing Strategy Under Uncertain Wind
+and Competitor Positions",037.pdf
+6344267,TSUD: Enhancing Stereo Matching Accuracy through Training on Small Uncertainty Data,155.pdf,"Water Contract Purchasing Policies for Drought Resilience
+in Santiago, Chile",174.pdf
+9625340,Heads Up Deep Q Hold-em,118.pdf,Q-Learning and Model Predictive Control for Drone Wildfire Response,141.pdf
+6836715,Fruitful Learning: Applying RL Algorithms to Suika Game,164.pdf,Bots and Boxes: AlphaZero for Playing Dots and Boxes,046.pdf
+6849222,WiLDCARD: Winning Liar's Dice with Calculative Agents and Reinforced Decision-Making,258.pdf,Playing with Fireworks: Optimizing Agent Strategy Under Uncertainty in Hanabi,162.pdf
+6382324,"Department-Side Course Scheduling to Maximize
+Student Satisfaction",022.pdf,WORDLE Solver,227.pdf
+6846057,Training an Up'N Down Agent with DDQN,150.pdf,Ear Training Suite for Music Students,116.pdf
+6846434,Employing Monte Carlo Tree Search for Aircraft Collision Avoidance during Temporary Flight Restrictions,157.pdf,Adaptive Satellite Selection for GNSS Tracking Using Reinforcement Learning,271.pdf
+6468941,Large language model alignment via two-layer neural network feedback,029.pdf,Optimizing Cabo Strategy with Monte Carlo Tree Search Applied to a Novel Game Engine,098.pdf
+6757411,Introspection for LLM Sampling,207.pdf,Drone Path Planning for Optimizing Environmental Neural Radiance Field Creation.,057.pdf
+50012200,Reinforcement Learning Algorithms for Connect 4,232.pdf,Reinforcement Learning Stacking Strategy for Stock Trading,175.pdf
+6393278,Keeping the Lights On for Campus: Using Deep Q-Learning and MDPs for Discrete and Continuous Micro-Energy Grid Optimization,180.pdf,Looking Forward To Tetris,002.pdf
+6778099,Ataxx of the Monte Carlo: Online and Offline Learning Strategies for an Arcade Game,189.pdf,Leveraging Q-Learning for Uncertainty within Medical Diagnosis,102.pdf
+6739500,Pitch Perfect: Optimizing Baseball Pitch Selection With Reinforcement Learning,266.pdf,Anticipating the Odds: A Lookahead Method for Blackjack Actor Development,137.pdf
+6319203,Multi-Robot Path Planning in a Grid World,143.pdf,Dynamic Optimization and Balancing of Winning Strategies in Mahjong Using MCTS,240.pdf
+6855642,Q-Learning-Driven Actuation for High-Precision Space Trusses,135.pdf,Modeling Stanford Football Betting as a Markov Decision Process,023.pdf
+6379252,Fast Speculative Decoding using MDPs for Efficient Token Drafting,182.pdf,Reward Prediction Error Under Uncertainty,083.pdf
+6735652,Fresh Pages: Dynamic Book Recommendation for Genre Exploration using Monte Carlo Tree Search,239.pdf,Tactile Graphics Exploration as a POMDP,246.pdf
+6335142,Unbeatable Checkers Bot 9000,268.pdf,Reinforcement Learning Agent for Cine2Nerdle: A Graph-Based Approach,122.pdf
+6417074,RL For Self Guided Rocket Landings,196.pdf,Optimizing Trading Strategies with MDPs,016.pdf
+6422870,"Building No-Limit Texas Hold
+‘Em Poker Agents
+with Deep Q-Learning and 
+Proximal Policy Optimization",172.pdf,Wheel of Fortune as a POMDP,202.pdf
+6504189,"Stanford Campus Smart Traffic
+Control",007.pdf,Online Path-Planning for Terrain Navigation Using MCTS,115.pdf
+6512336,Settling On A Better Method for Training Catan-Playing Agents,194.pdf,Deep Q-learning on 3D 2048,261.pdf
+6504508,Evade me if you can!!,092.pdf,ParkFinder - Tackling Uncertainty in Finding Parking at Stanford University,055.pdf
+6057096,Blackjack: Playing Optimally Through Q-Learning,187.pdf,Adaptive Stock Trading with Reinforcement Learning,228.pdf
+6756966,Dynamical Tasks Planner,212.pdf,SupeRL Mario Bros,222.pdf
+6846842,"BlackJack: Q-Learning, SARSA, and Deep Q-Learning Approaches",010.pdf,"Pick Your Poison: Navigating the Paris Public Transportation System Using Monte Carlo Tree Search
+",082.pdf
+6853225,Lima’s Traffic Management Using POMDPs: A Q-Learning Approach for Efficient Control of Urban Traffic Lights,123.pdf,PERLHF: Parameter Efficient Reinforcement Learning from Human Feedback,214.pdf
+6846519,Q-Learning for Blackjack: Simulation and Strategy Optimization,234.pdf,RL Options Trading Strategies,070.pdf
+6453054,Applying MDPs and POMDPs to Enhance Decision-Making in Mario Party,166.pdf,MDP is All You Need,237.pdf
+6496664,Crack The Board,139.pdf,RL Approaches to Optimize Supply Chain Dynamics in the Beer Game,048.pdf
+6421572,Pandemic Policy Planning in a Noncompliant Population,079.pdf,Analysis of Q-Learning and POMDP Frameworks for Optimal Poker Strategies,076.pdf
+6750187,Autonomous Cruise with Markov Decision Processes,094.pdf,Adaptive Strategy Optimization for 2048 Using Reinforcement Learning,087.pdf
+6846131,POMDP Knowledge Tracing,128.pdf,Learning to Play the Oh Pshaw Card Game using a Reinforcement Learning Agent,033.pdf
+6260168,The Pupper Parkour Challenge and a theoretical framework for hierarchical decision making,112.pdf,AI Want to Be The Very Best,249.pdf
+6136144,MDPs for Fire Response,013.pdf,Optimal Strategies in Penalty Shootouts,151.pdf
+6647269,DPO Training for Mathematical Problem Solving,027.pdf,"Flying in the Dark – Drone Swarm Navigation with Uncertain Communication and Vision
+",056.pdf
+6682276,Investment Decision Making,257.pdf,RoadSense: Intelligent Agents for Traffic Navigation,028.pdf
+6371168,Deep Q-Networks with Snake,269.pdf,Q-Learning for Multi-Modal Seaglider Control,138.pdf
+6605306,Learning the Art of Persuasion with Online Dialog Policy Planning,080.pdf,The Candy Crusher,117.pdf
+6503940,Trajectory Planning in Unknown Environment,220.pdf,"Multi-Method Learning Approaches to Codenames: A Comparative Study of MCTS, Fast Informed Bounds, and Policy Gradient Methods",205.pdf
+6376529,ORRCA: Online Reinforcement for Rapid Cache Adaptation,168.pdf,Modeling Mafia with Q-Learning,121.pdf
+6841629,Playing Battleship Game with Deep Reinforcement Learning,259.pdf,Wordle MCS: An Improved Wordle Solver,062.pdf
+6416493,Smart Picks – A Q-Learning Approach to Cinema,039.pdf,POMDPs for Cervical Cancer Screening,132.pdf
+6626241,Safe Handling of Intersection Events under other agents’ Latent Driving styles (SHIELD),052.pdf,Pedagogical Bandits: Online Curriculum Learning for Knowledge Distillation,065.pdf
+6758749,Blokus Bot (Botkus? Blobotkus?),171.pdf,Investigating Emergent Behavior from Socially Inspired Reward Parameters in Iterated Prisoner's Dilemma,265.pdf
+6545704,Finding the 근 (Root) of 바둑 (Go),264.pdf,Multi-Stage Adaptive Inference with Cascaded Models: A POMDP Formulation,064.pdf
+6504266,Optimizing Strategy for Catching Pokémon in the Safari Zone Minigame,124.pdf,Navigating drones in an 3D minefield,193.pdf
+6504505,TikTokRL: Optimizing for TikTok Engagement,075.pdf,Reinforcement Learning Balancing of an Inverted Pendulum to any Degree,195.pdf
+6503924,"Optimizing Retail Pricing Strategies with
+Reinforcement Learning: A Markov Decision
+Process Approach",089.pdf,Navigating the Lunar Surface under Low Visibility Conditions,254.pdf
+6827942,Q-Learning for NFL Play Calling,154.pdf,RL & Blackjack,160.pdf
+6761069,99 Ways to Win Ninety-Nine,152.pdf,INVENTORY MANAGEMENT WITH Q-LEARNING AND DEEP Q-NETWORKS,236.pdf
+6773780,Robust Pre-Computed Autonomy for Enceladus Orbilander,238.pdf,Discovering Protein Complexes in Protein Interaction Networks Using Q-Learning,109.pdf
+6422429,Hit or Stand?,054.pdf,ASTPrompterRoll,084.pdf
+6853711,MARLCar: Single- vs. Multi-Agent Reinforcement Learning in Car Racing,188.pdf,AlphaZero Continuous for Car Lateral Control,119.pdf
+6421757,Using LLMs and Monte Carlo Tree Search to Create a Human-Level Codenames Player,040.pdf,A Markovian Approach to Skincare,025.pdf
+6846467,Data-Driven Hurricane Evacuation Policy Optimization,100.pdf,Optimizing Rspiratory Management using Markov Decision Processes: A Reinforcement Learning Approach on the MIMIC-IV Dataset,161.pdf
+6419692,Ambulance Dispatching  with MCTS,001.pdf,Autonomous Intersection Control with Monte Carlo tree search,274.pdf
+6756453,Dealer's Dilemma - Learning To Play Dealer's Choice Poker,077.pdf,Reinforcement Learning with Time Travel,248.pdf
+6933858,Stock Trading is an MDP: The Importance of State Space Complexity,159.pdf,"Tiny Brains, Big Gains: Enhancing Multi-Step Reasoning in Compact Models with Branch and Bound",225.pdf
+6457034, Hormone-informed Training Strategies for Female Athletes,073.pdf,Short-Term Memory for Partially Observable Markov Games,204.pdf
+6452910,Evaluation of Application of Maximum Likeilhood Estimation Models to Mancala,047.pdf,Rat-AI-touille: Enhancing Multi-Agent Collaboration in Overcooked-AI with Communication,217.pdf
+6421568,Maestro: Composing Music with Q-Learning,229.pdf,"Ad-ventures in Bidding: Agents, Bids, and the Fight for Clicks",145.pdf
+6295049,Can We Improve Educational Intervention Timing with an MDP?,096.pdf,Optimization of Blackjack Strategies Using Reinforcement Learning,255.pdf
+6751033,Model Based State-Space Planning and EKF for Manipulator Arm Drone Guidance in a Partially Observable Environment,011.pdf,"Dual-Agent Reinforcement Learning for Strategy Optimization in Gomoku
+",105.pdf
+6751807,UAV Swarm Control Under Uncertainty,068.pdf,"Sequential Decision-Making for Medical Image Diagnosis
+under Uncertainty",125.pdf
+6844319,Website Engagement,113.pdf,Adaptive Mesh Refinement through Deep Reinforcement Learning,036.pdf
+6537751,Evaluating Wordle Strategies Produced by Monte Carlo Tree Search,021.pdf,Game of Wordle: AI-Driven Word Guessing,061.pdf
+6842573,"TerraSafeRL: Adaptive Single-Agent, Terrain-Aware Wildfire Evacuation with Dynamic Pathfinding",019.pdf,"Winner Winner Chicken Dinner: Reward Shaping for A2C
+Applied to Atari Freeway",024.pdf
+6759260,Beyond Luck: Optimal Briscola Strategies via Deep Reinforcement Learning,216.pdf,Best Carpet Seller in Marrakech,149.pdf
+6752704,Connect4 MCTS Implementation,060.pdf,"Optimizing Uno with Forward Search RL
+",208.pdf
+6843230,Can Q-Learning Learn You-Learning? Reinforcement Learning for Adaptive Quizzing,153.pdf,Viewing Hyperparameter Tuning as a Sequential Decision-Making Problem,247.pdf
+6752135,"Shoot First, Think Later? Optimizing Soccer Decision Making with MDPs",273.pdf,Decision-Making for a Two-Agent Adversarial Game,262.pdf
+6416644,Belief Space Planning under Uncertainty with the Cross-Entropy Method,020.pdf,Learning Cribbage using a Two-Phase Model,173.pdf
+6451502,Optimal Water Allocation Strategies,272.pdf,"Slithering into Smarter Solutions: Winning at SNAKE
+",260.pdf
+6503661,Molecules as a Language,184.pdf,Martian Navigation POMDP,035.pdf
+6842935,Spades is a POMDP,058.pdf,Euchre Bot,199.pdf
+6840702,Reinforcement Wars: Will the Airline or the Passenger Win the Pricing Game?,158.pdf,Hanabi RL Agent,270.pdf
+6090674,Settling the Odds: AI Agents in Catan,221.pdf,How to form a 2D murmuration? Finding the best strategy of flock formation through reinforcement learning,051.pdf
+6846654,A Study of the AlphaZero Framework Applied to Xiangqi,148.pdf,Predicting Precipitation with Actor-Critic and Long Short-Term Memory,032.pdf
+6857241,Monopoly Masterminds One Tile at a Time,038.pdf,Using Regression Gradients to Optimize a Simple Policy for Mahjong​,086.pdf
+6846791,Optimizing Investment Decisions in the Airline Industry Using Random Forest Models,026.pdf,Imaginary-MCTS: Autonomous Computer Use Agents with Enhanced Online Planning,015.pdf
+6756311,Path to 101: A Guided Q-Learning Simulation for Prime Climb,014.pdf,Q-art Pole,170.pdf
+6415951,Deep Reinforcement Learning in Robot Object Stacking,233.pdf,Santa Barbara Infrastructure Planning: A Comparison of Q-Learning and Evolutionary Algorithm - Binary Tree Search Policy Optimization,018.pdf
+6345325,Reinforcement Learning Agents for Settlers of Caton Using PPO,201.pdf,Solving Blackjack with An Infinite Deck with Reinforcement Learning,245.pdf
+6742189,Forward Search Agent for 'Fantastic Bits' Game,179.pdf,"Parkd: Model Free RL for Truck Parking Optimization
+",241.pdf
+6510456,ADVERSARIAL AUTONOMOUS DRIVERS ON THE YAS MARINA CIRCUIT,093.pdf,Investigating Mathematical Reasoning in Smaller Language Models using Likelihood Ratio Policy Gradient Updates and Beam Search,198.pdf
+6493862,Daily Task Scheduler,074.pdf,Single- and Multi-Agent Approaches to Equitable MELD-Driven Liver Allocation,114.pdf
+6537695,"Beyond The Zillow Z-Estimate: PPO-Driven Reinforcement
+Learning for Long-Term Real Estate Portfolio Management",230.pdf,The Optimal Dating Path,252.pdf
+6335934,Saccading Through A Visual Scene,156.pdf,Stranded on a Grid: Modeling NYT Strands as an MDP and Solving with MCTS,218.pdf
+6335680,The Dual Mandate: Modelling Inflation and Unemployment Uncertainty from Setting the Federal Funds Rate,085.pdf,Optimal Shipping Schedules for Collaborating Blood Banks,003.pdf
+6448456,Play Gomoku Game with Deep Q-Networks,129.pdf,Mineswept,120.pdf
+6655403,Inside the Black Box: Bayesian Networks for Contextual Bandit Modeling,067.pdf,Drone Pathfinding,144.pdf
+6652644,Policy Learning for War: Modeling the Modified War Card Game with Markov Decision Processes,103.pdf,Turning Pages with Reinforcement: A Markov Decision Process Approach to Book Recommendation,091.pdf
+6650044,Optimized Satellite Acquisition for Precise LEO GPS Positioning,177.pdf,"Optimizing Personalized Treatment with Markov
+Decision Processes",008.pdf
+5317060,Optimizing Task Completion Time Updates Using POMDPs,059.pdf,Tetris: Game Playing Under Uncertainty,031.pdf
+6509685,Developing an AI Agent for Strategic Decision Making in Pokémon Battles Under Uncertainty,136.pdf,Implementing Q-learning to Optimize Preflop Poker,111.pdf
+5815683,Bayesian Range Estimation in Heads-Up Poker,167.pdf,Adapting Transit Schedules to Daily Ridership Patterns using SARSA,146.pdf
+6509496,Crafting Basketball Strategies with Reinforcement Learning,250.pdf,"Monte Carlo Tree Search for Drone Navigation and Collision Prevention
+",042.pdf
+6532354,Transportation Network Maintenance Planning with Reinforcement Learning,185.pdf,Gobbling Up Decisions: Optimizing Pacman Strategy with MDPs,099.pdf
+6742067,BookFind: A Novel Recommendation Algorithm using Markov Decision Processes,244.pdf,Algorithmic Trading for IMC Prosperity 2,104.pdf
+6649300,"Adaptive Path Planning for Urban Drone Delivery Under
+Uncertainty",211.pdf,Decentralized Earth Observation Planning in Satellite Constellations,097.pdf
+6646033,Optimizing Sea Lice Management in Norwegian Salmon Aquaculture Using Q-Learning,053.pdf,"Learning Speed-Based Binning for CMA Optimization in Walking Prosthetics
+",165.pdf
+5909757,Application of Reinforcement Learning in Modern Art Game,134.pdf,"Actor-Critic Meta Gradient Learning for Classic
+Control Environments",223.pdf
+6530125,Determining Context-Based Hard-Negative Policies with Online Planning for Biodiversity Monitoring,041.pdf,Imaginary-MCTS: Autonomous Computer Use Agents with Enhanced Online Planning,015.pdf
+6503668,ORRCA: Online Reinforcement for Rapid Cache Adaptation,168.pdf,"Sequential Decision-Making for Medical Image Diagnosis
+under Uncertainty",125.pdf
+6226133,Robust Path-Planning for Autonomous Drones,263.pdf,Adaptive Stock Trading with Reinforcement Learning,228.pdf
+6122071,Can We Improve Educational Intervention Timing with an MDP?,096.pdf,Modeling Stanford Football Betting as a Markov Decision Process,023.pdf
+6335358,"Shoot First, Think Later? Optimizing Soccer Decision Making with MDPs",273.pdf,Data-Driven Hurricane Evacuation Policy Optimization,100.pdf
+6509492,Looking Forward To Tetris,002.pdf,Determining Context-Based Hard-Negative Policies with Online Planning for Biodiversity Monitoring,041.pdf
+6845590,Managing Power Grids During Hurricanes Using Probabilistic Decision-Making,178.pdf,Deep Q-learning on 3D 2048,261.pdf
+6754868,Adaptive Mesh Refinement through Deep Reinforcement Learning,036.pdf,Reinforcement Learning Balancing of an Inverted Pendulum to any Degree,195.pdf
+6452380,Predicting Precipitation with Actor-Critic and Long Short-Term Memory,032.pdf,ADVERSARIAL AUTONOMOUS DRIVERS ON THE YAS MARINA CIRCUIT,093.pdf
+6456565,PokerBot,034.pdf,Deep Reinforcement Learning in Robot Object Stacking,233.pdf
+6450815,Autonomous Lunar Landing with Deep Q-Learning,191.pdf,Policy Learning for War: Modeling the Modified War Card Game with Markov Decision Processes,103.pdf
+6294184,Pedagogical Bandits: Online Curriculum Learning for Knowledge Distillation,065.pdf,Application of Reinforcement Learning in Modern Art Game,134.pdf
+6852027,Single- and Multi-Agent Approaches to Equitable MELD-Driven Liver Allocation,114.pdf,ASTPrompterRoll,084.pdf
+6453262,Solving Investiture: A Stock Exchange Game,030.pdf,RoboDelivery: A Q-Learning Approach to Autonomous Package Distribution,186.pdf
+6504070,The Dual Mandate: Modelling Inflation and Unemployment Uncertainty from Setting the Federal Funds Rate,085.pdf,Blokus Bot (Botkus? Blobotkus?),171.pdf
+6504251,Reinforcement Learning with Time Travel,248.pdf,Monopoly Masterminds One Tile at a Time,038.pdf
+6544411,What the Farkle!?,017.pdf,Evade me if you can!!,092.pdf
+6684178,Computational Approaches to Optimize HIV Treatment Strategies Using Synthetic Data,235.pdf,AeroAstro Work-Life Balance: How to Maximize Your AA 228 Quiz Scores,012.pdf
+6496662,Optimizing Cabo Strategy with Monte Carlo Tree Search Applied to a Novel Game Engine,098.pdf,Going Bananas for Uncertainty: Creating a Bananagrams Agent with MCTS,190.pdf
+5898203,Safe Handling of Intersection Events under other agents’ Latent Driving styles (SHIELD),052.pdf,Using LLMs and Monte Carlo Tree Search to Create a Human-Level Codenames Player,040.pdf
+6684116,RL Options Trading Strategies,070.pdf,Optimizing Trading Strategies with MDPs,016.pdf
+6857587,"Optimal Regatta Sailing Strategy Under Uncertain Wind
+and Competitor Positions",037.pdf,Diagnostic Imaging in Radiology: Developing a Deep Learning Decision Support Tool,243.pdf
+6503959,Spades is a POMDP,058.pdf,"Adaptive Path Planning for Urban Drone Delivery Under
+Uncertainty",211.pdf
+6504359,"Ad-ventures in Bidding: Agents, Bids, and the Fight for Clicks",145.pdf,Saccading Through A Visual Scene,156.pdf
+6649780,"Monte Carlo Tree Search for Drone Navigation and Collision Prevention
+",042.pdf,INVENTORY MANAGEMENT WITH Q-LEARNING AND DEEP Q-NETWORKS,236.pdf
+6848909,"Attitude Determination and Control for a Spacecraft with
+Unreliable State Measurements",063.pdf,Molecules as a Language,184.pdf
+6381986,MARLCar: Single- vs. Multi-Agent Reinforcement Learning in Car Racing,188.pdf,Q-Learning for the Secretary Problem,267.pdf
+6757093,Navigating the Lunar Surface under Low Visibility Conditions,254.pdf,Model Based State-Space Planning and EKF for Manipulator Arm Drone Guidance in a Partially Observable Environment,011.pdf
+6685009,AlphaZero Continuous for Car Lateral Control,119.pdf,Introspection for LLM Sampling,207.pdf
+6422615,"Pick Your Poison: Navigating the Paris Public Transportation System Using Monte Carlo Tree Search
+",082.pdf,Dealer's Dilemma - Learning To Play Dealer's Choice Poker,077.pdf
+6604920,Reinforcement Learning Stacking Strategy for Stock Trading,175.pdf,AI Want to Be The Very Best,249.pdf
+6545238,Optimizing Theme Park Experience Using POMDPs,004.pdf,Reinforcement Wars: Will the Airline or the Passenger Win the Pricing Game?,158.pdf
+6375365,Crack The Board,139.pdf,Deep Q-Networks with Snake,269.pdf
+6456336,The Candy Crusher,117.pdf,Mastering Pong with Deep Q-Learning,126.pdf
+6545639,A Markovian Approach to Skincare,025.pdf,Navigating drones in an 3D minefield,193.pdf
+6504427,Bots and Boxes: AlphaZero for Playing Dots and Boxes,046.pdf,Path to 101: A Guided Q-Learning Simulation for Prime Climb,014.pdf
+6418633,"Modeling Renewable Energy Transitions as a Markov Decision Process:
+A Q-Learning approach to minimizing fossil-fuel reliance while meeting energy demands",088.pdf,BookFind: A Novel Recommendation Algorithm using Markov Decision Processes,244.pdf
+6543538,Rat-AI-touille: Enhancing Multi-Agent Collaboration in Overcooked-AI with Communication,217.pdf,Playing Battleship Game with Deep Reinforcement Learning,259.pdf
+50006555,Leveraging Q-Learning for Uncertainty within Medical Diagnosis,102.pdf, Hormone-informed Training Strategies for Female Athletes,073.pdf
+6453116,Fast Speculative Decoding using MDPs for Efficient Token Drafting,182.pdf,Solving Plants vs Zombies with Monte Carlo Tree Search,176.pdf
+6932560,Anticipating the Odds: A Lookahead Method for Blackjack Actor Development,137.pdf,Beyond Luck: Optimal Briscola Strategies via Deep Reinforcement Learning,216.pdf
+6602620,RL For Self Guided Rocket Landings,196.pdf,Q-Learning for Blackjack: Simulation and Strategy Optimization,234.pdf
+6509988,"Optimizing Retail Pricing Strategies with
+Reinforcement Learning: A Markov Decision
+Process Approach",089.pdf,RL Approaches to Optimize Supply Chain Dynamics in the Beer Game,048.pdf
+6932482,"Learning Speed-Based Binning for CMA Optimization in Walking Prosthetics
+",165.pdf,"Multi-Robot Navigation Using Sequential Decision
+Making Processes",049.pdf
+6933612,POMDP Navigation performance for Orienteering,081.pdf,TikTokRL: Optimizing for TikTok Engagement,075.pdf
+6757893,Keeping the Lights On for Campus: Using Deep Q-Learning and MDPs for Discrete and Continuous Micro-Energy Grid Optimization,180.pdf,Optimizing Electricity Futures Trading with Reinforcement Learning and Deep Learning Driven Price Forecasting,090.pdf
+50023659,Pandemic Policy Planning in a Noncompliant Population,079.pdf,Optimizing Strategy for Catching Pokémon in the Safari Zone Minigame,124.pdf
+6758671,Turning Pages with Reinforcement: A Markov Decision Process Approach to Book Recommendation,091.pdf,Euchre Bot,199.pdf
+6436018,Mineswept,120.pdf,Using Regression Gradients to Optimize a Simple Policy for Mahjong​,086.pdf
+6330054,SmartConnections: Using Q-Learning to Solve The NYT Connections,009.pdf,Meow-kov Decisions: Reward Functions for an Exploding Kittens MDP,219.pdf
+6504008,Ability of DQN Model to Learn Theory of Mind when Playing Hanabi,071.pdf,Martian Navigation POMDP,035.pdf
+6503709,"Actor-Critic Meta Gradient Learning for Classic
+Control Environments",223.pdf,Learning the Art of Persuasion with Online Dialog Policy Planning,080.pdf
+6605663,Evaluating Wordle Strategies Produced by Monte Carlo Tree Search,021.pdf,Forward Search Agent for 'Fantastic Bits' Game,179.pdf
+6504069,"Playing Regicide: Optimal Game Play in Uncertain
+Environments",206.pdf,Website Engagement,113.pdf
+6504577,RL & Blackjack,160.pdf,How to form a 2D murmuration? Finding the best strategy of flock formation through reinforcement learning,051.pdf
+6604849,MDPs for Fire Response,013.pdf,Reinforcement Learning Control of Active Suspension System,044.pdf
+6466801,Safe Multi-Agent Spacecraft Reconfiguration Under Uncertainty,050.pdf,"Kidney Matching: A Reinforcement Learning Approach
+",209.pdf
+6854577,Multi-Stage Adaptive Inference with Cascaded Models: A POMDP Formulation,064.pdf,Learning Cribbage using a Two-Phase Model,173.pdf
+6429598,Lunar Landing,183.pdf,Smart Picks – A Q-Learning Approach to Cinema,039.pdf
+6648912,Learning Greenification Policies using Markov Decision Processes,095.pdf,The Optimal Dating Path,252.pdf
+6649257,A Love Letter to Game Playing,169.pdf,When to Assist and Retrain? Learning Policies for Algorithmic Decision Support,197.pdf
+6683428,"Water Contract Purchasing Policies for Drought Resilience
+in Santiago, Chile",174.pdf,Blackjack: Playing Optimally Through Q-Learning,187.pdf
+6684042,QRaFT: Quantitative and Risk-Adjusted Framework for Algorithmic Trading,192.pdf,Maestro: Composing Music with Q-Learning,229.pdf
+6302163,Belief Space Planning under Uncertainty with the Cross-Entropy Method,020.pdf,"BlackJack: Q-Learning, SARSA, and Deep Q-Learning Approaches",010.pdf
+6414990,Dynamic Optimization and Balancing of Winning Strategies in Mahjong Using MCTS,240.pdf,Learning to Play the Oh Pshaw Card Game using a Reinforcement Learning Agent,033.pdf
+6225521,Connect Four Conundrum,181.pdf,Optimized helicopter ambulance routing for stroke patients,072.pdf
+6760789,Play Gomoku Game with Deep Q-Networks,129.pdf,Q-Learning-Driven Actuation for High-Precision Space Trusses,135.pdf
+6757253,Building Renewable Energy Grids using Monte Carlo Tree Search and Karger's Algorithm,163.pdf,Monadic Hierarchical Planning in Tactical Simulations: A Q-Learning Framework for Strategic Unit Composition and Placement,226.pdf
+6743413,Ataxx of the Monte Carlo: Online and Offline Learning Strategies for an Arcade Game,189.pdf,Exploration and Resource Optimization for Autonomous Rover Missions,133.pdf
+6872077,ParkFinder - Tackling Uncertainty in Finding Parking at Stanford University,055.pdf,Employing Monte Carlo Tree Search for Aircraft Collision Avoidance during Temporary Flight Restrictions,157.pdf
+6606264,Fresh Pages: Dynamic Book Recommendation for Genre Exploration using Monte Carlo Tree Search,239.pdf,Training an Up'N Down Agent with DDQN,150.pdf
+6759464,"Winner Winner Chicken Dinner: Reward Shaping for A2C
+Applied to Atari Freeway",024.pdf,Heads Up Deep Q Hold-em,118.pdf
+6758617,Dynamic Frequency Band Selection for Radar Operation in the Presence of Interference,066.pdf,Optimizing Job Applications Under Uncertainty,043.pdf
+6387525,Connect4 MCTS Implementation,060.pdf,Analysis of Q-Learning and POMDP Frameworks for Optimal Poker Strategies,076.pdf
+6763559,Investment Decision Making,257.pdf,Ear Training Suite for Music Students,116.pdf
+6845091,Evaluation of Application of Maximum Likeilhood Estimation Models to Mancala,047.pdf,Online Path-Planning for Terrain Navigation Using MCTS,115.pdf
+6851843,Viewing Hyperparameter Tuning as a Sequential Decision-Making Problem,247.pdf,"Slithering into Smarter Solutions: Winning at SNAKE
+",260.pdf
+6843528,Game of Wordle: AI-Driven Word Guessing,061.pdf,Stock trading with deep q-learning,130.pdf
+6605004,Q-Learning for NFL Play Calling,154.pdf,Reinforcement Earning: RL-based Algorithmic Trading,253.pdf
+6504086,Tetris: Game Playing Under Uncertainty,031.pdf,Optimal Shipping Schedules for Collaborating Blood Banks,003.pdf
+6535748,Bayesian Range Estimation in Heads-Up Poker,167.pdf,Crafting Basketball Strategies with Reinforcement Learning,250.pdf
+6646065,Optimizing Sea Lice Management in Norwegian Salmon Aquaculture Using Q-Learning,053.pdf,Drone Path Planning for Optimizing Environmental Neural Radiance Field Creation.,057.pdf
+6509483,Optimizing Rspiratory Management using Markov Decision Processes: A Reinforcement Learning Approach on the MIMIC-IV Dataset,161.pdf,Navigating the Star Wars: Deep Reinforcement Learning for Competitive Team Battles!,140.pdf
+6544580,Ambulance Dispatching  with MCTS,001.pdf,Robust Pre-Computed Autonomy for Enceladus Orbilander,238.pdf
+6509494,Large language model alignment via two-layer neural network feedback,029.pdf,Cracking the Connections Game,078.pdf
+6544106,POMDPs for Cervical Cancer Screening,132.pdf,To GNN or to LLM? That is a Risk(y) Question,142.pdf
+6753305,Investigating Emergent Behavior from Socially Inspired Reward Parameters in Iterated Prisoner's Dilemma,265.pdf,A Study of the AlphaZero Framework Applied to Xiangqi,148.pdf
+6150634,SupeRL Mario Bros,222.pdf,Optimized Satellite Acquisition for Precise LEO GPS Positioning,177.pdf
+6872215,Unbeatable Checkers Bot 9000,268.pdf,Modeling Human Behavior in Poker,101.pdf
+6743399,MDP is All You Need,237.pdf,Optimal Water Allocation Strategies,272.pdf
+6333673,Best Carpet Seller in Marrakech,149.pdf,Applying MDPs and POMDPs to Enhance Decision-Making in Mario Party,166.pdf
+5922204,Q-Learning and Model Predictive Control for Drone Wildfire Response,141.pdf,Reinforcement Learning Agent for Cine2Nerdle: A Graph-Based Approach,122.pdf
+6605755,WORDLE Solver,227.pdf,DPO Training for Mathematical Problem Solving,027.pdf
+6854469,"Parkd: Model Free RL for Truck Parking Optimization
+",241.pdf,Short-Term Memory for Partially Observable Markov Games,204.pdf
+6743517,Tactile Graphics Exploration as a POMDP,246.pdf,Wordle MCS: An Improved Wordle Solver,062.pdf
+6605154,Drone Pathfinding,144.pdf,Modeling Mafia with Q-Learning,121.pdf
+6503887,"Department-Side Course Scheduling to Maximize
+Student Satisfaction",022.pdf,Optimal Strategies in Penalty Shootouts,151.pdf
+6495816,"Optimizing Personalized Treatment with Markov
+Decision Processes",008.pdf,Wheel of Fortune as a POMDP,202.pdf
+6757261,Optimal Policies for Competition Power-Off Landings in Varying Wind Conditions with Markov Decision Processes,276.pdf,Reinforcement Learning Agents for Settlers of Caton Using PPO,201.pdf
+6755145,Catan Conqueror: Building Bots to Rule the Island,242.pdf,Decentralized Earth Observation Planning in Satellite Constellations,097.pdf
+6504192,Cool Maze Searcher - Reinforcement Learning in 3D Robot Maze Navigation,108.pdf,Securing Carbon Geological Storage: A Sequential Decision Approach for CO2 Monitoring and Leak Detection,256.pdf
+6743223,Q-Learning for Multi-Modal Seaglider Control,138.pdf,Algorithmic Trading for IMC Prosperity 2,104.pdf
+6504316,Discovering Protein Complexes in Protein Interaction Networks Using Q-Learning,109.pdf,Pitch Perfect: Optimizing Baseball Pitch Selection With Reinforcement Learning,266.pdf
+6420483,Settling On A Better Method for Training Catan-Playing Agents,194.pdf,Over(Q)ooked: Developing Q-Learning Agents for Overcooked,147.pdf
+6509990,Lima’s Traffic Management Using POMDPs: A Q-Learning Approach for Efficient Control of Urban Traffic Lights,123.pdf,"Stanford Campus Smart Traffic
+Control",007.pdf
+6452665,Gobbling Up Decisions: Optimizing Pacman Strategy with MDPs,099.pdf,"Beyond The Zillow Z-Estimate: PPO-Driven Reinforcement
+Learning for Long-Term Real Estate Portfolio Management",230.pdf
+6423362,Trajectory Planning in Unknown Environment,220.pdf,WiLDCARD: Winning Liar's Dice with Calculative Agents and Reinforced Decision-Making,258.pdf
+6383914,Hanabi RL Agent,270.pdf,"Optimizing Uno with Forward Search RL
+",208.pdf
+6369691,Playing with Fireworks: Optimizing Agent Strategy Under Uncertainty in Hanabi,162.pdf,Optimizing Decision-Making in Open Face Chinese Poker Using Monte Carlo Tree Search,275.pdf
+6856876,Exploring Deep Behavioral Cloning with Synthetic Expert Data for 2048,005.pdf,PERLHF: Parameter Efficient Reinforcement Learning from Human Feedback,214.pdf
+6604810,"""Monkey!"": Blackjack Decision-Making Agent",127.pdf,Daily Task Scheduler,074.pdf
+6493888,"Dual-Agent Reinforcement Learning for Strategy Optimization in Gomoku
+",105.pdf,Solving Blackjack with An Infinite Deck with Reinforcement Learning,245.pdf
+6682547,UAV Swarm Control Under Uncertainty,068.pdf,"Flying in the Dark – Drone Swarm Navigation with Uncertain Communication and Vision
+",056.pdf
+6683977,Guess Who Wins Guess Who?,107.pdf,Can Q-Learning Learn You-Learning? Reinforcement Learning for Adaptive Quizzing,153.pdf
+6420415,Hit or Stand?,054.pdf,Adaptive Strategy Optimization for 2048 Using Reinforcement Learning,087.pdf
+6742857,Stock Trading is an MDP: The Importance of State Space Complexity,159.pdf,Q-art Pole,170.pdf
+6755651,Fruitful Learning: Applying RL Algorithms to Suika Game,164.pdf,Stranded on a Grid: Modeling NYT Strands as an MDP and Solving with MCTS,218.pdf
+6755380,"Building No-Limit Texas Hold
+‘Em Poker Agents
+with Deep Q-Learning and 
+Proximal Policy Optimization",172.pdf,Developing an AI Agent for Strategic Decision Making in Pokémon Battles Under Uncertainty,136.pdf
+6642660,"Tiny Brains, Big Gains: Enhancing Multi-Step Reasoning in Compact Models with Branch and Bound",225.pdf,What the Heck is Optimal: MCTS and Q-Learning for Strategic Bidding,210.pdf
+6452182,"Multi-Method Learning Approaches to Codenames: A Comparative Study of MCTS, Fast Informed Bounds, and Policy Gradient Methods",205.pdf,Baba Is Who? Using Q-Learning to Categorize Human Learning in a Puzzle Game (almost),251.pdf
+6455040,Adapting Transit Schedules to Daily Ridership Patterns using SARSA,146.pdf,Santa Barbara Infrastructure Planning: A Comparison of Q-Learning and Evolutionary Algorithm - Binary Tree Search Policy Optimization,018.pdf
+6603736,Satellite Task Scheduling using Markov Decision Process,215.pdf,RoadSense: Intelligent Agents for Traffic Navigation,028.pdf
+6765141,Freshman Year Class Selection as an MDP,224.pdf,Autonomous Intersection Control with Monte Carlo tree search,274.pdf
+6423903,Optimizing Investment Decisions in the Airline Industry Using Random Forest Models,026.pdf,TSUD: Enhancing Stereo Matching Accuracy through Training on Small Uncertainty Data,155.pdf
+6346881,Reward Prediction Error Under Uncertainty,083.pdf,Autonomous Cruise with Markov Decision Processes,094.pdf
+6503509,The Pupper Parkour Challenge and a theoretical framework for hierarchical decision making,112.pdf,Adaptive Satellite Selection for GNSS Tracking Using Reinforcement Learning,271.pdf
+6495776,Investigating Mathematical Reasoning in Smaller Language Models using Likelihood Ratio Policy Gradient Updates and Beam Search,198.pdf,Inside the Black Box: Bayesian Networks for Contextual Bandit Modeling,067.pdf
+6495861,Optimizing Task Completion Time Updates Using POMDPs,059.pdf,Reducing Patient No-Shows through Q-Learning Optimized Scheduling,131.pdf
+6424154,POMDP Knowledge Tracing,128.pdf,"TerraSafeRL: Adaptive Single-Agent, Terrain-Aware Wildfire Evacuation with Dynamic Pathfinding",019.pdf
+6390128,Decision Making Under Uncertainty in Secret Hitler,231.pdf,Transportation Network Maintenance Planning with Reinforcement Learning,185.pdf
+6760342,Optimization of Blackjack Strategies Using Reinforcement Learning,255.pdf,99 Ways to Win Ninety-Nine,152.pdf
+6828425,Finding the 근 (Root) of 바둑 (Go),264.pdf,Dynamical Tasks Planner,212.pdf
+6853736,Settling the Odds: AI Agents in Catan,221.pdf,A Decision-Making Model of Multi-target Reaching in Motor Neuroscience,106.pdf
+6856841,Implementing Q-learning to Optimize Preflop Poker,111.pdf,Reinforcement Learning Algorithms for Connect 4,232.pdf
+6453514,Graph Reinforcement Learning for the Traveling Salesman Problem with Stochastic Travel Times,213.pdf,Multi-Robot Path Planning in a Grid World,143.pdf
+6730178,Decision-Making for a Two-Agent Adversarial Game,262.pdf,Invasive Species,045.pdf
+6417410,"Playing Regicide: Optimal Game Play in Uncertain
+Environments",206.pdf,Optimizing Theme Park Experience Using POMDPs,004.pdf
+6286766,"Attitude Determination and Control for a Spacecraft with
+Unreliable State Measurements",063.pdf,Hanabi RL Agent,270.pdf
+6743932,"Optimal Regatta Sailing Strategy Under Uncertain Wind
+and Competitor Positions",037.pdf,Viewing Hyperparameter Tuning as a Sequential Decision-Making Problem,247.pdf
+6749968,Reinforcement Learning Control of Active Suspension System,044.pdf,Graph Reinforcement Learning for the Traveling Salesman Problem with Stochastic Travel Times,213.pdf
+6535716,Maestro: Composing Music with Q-Learning,229.pdf,ASTPrompterRoll,084.pdf
+6849363,Smart Picks – A Q-Learning Approach to Cinema,039.pdf,Stock trading with deep q-learning,130.pdf
+6765574,"""Monkey!"": Blackjack Decision-Making Agent",127.pdf,Cracking the Connections Game,078.pdf
+6679396,When to Assist and Retrain? Learning Policies for Algorithmic Decision Support,197.pdf,"Winner Winner Chicken Dinner: Reward Shaping for A2C
+Applied to Atari Freeway",024.pdf
+6765483,Q-Learning for the Secretary Problem,267.pdf,Drone Path Planning for Optimizing Environmental Neural Radiance Field Creation.,057.pdf
+6682314,Reducing Patient No-Shows through Q-Learning Optimized Scheduling,131.pdf,Molecules as a Language,184.pdf
+6330221,Reinforcement Learning Balancing of an Inverted Pendulum to any Degree,195.pdf,Euchre Bot,199.pdf
+6511141,Model Based State-Space Planning and EKF for Manipulator Arm Drone Guidance in a Partially Observable Environment,011.pdf,Saccading Through A Visual Scene,156.pdf
+6423139,Learning the Art of Persuasion with Online Dialog Policy Planning,080.pdf,"Pick Your Poison: Navigating the Paris Public Transportation System Using Monte Carlo Tree Search
+",082.pdf
+6605271,Reinforcement Learning with Time Travel,248.pdf,"Slithering into Smarter Solutions: Winning at SNAKE
+",260.pdf
+6545397,Unbeatable Checkers Bot 9000,268.pdf,"Dual-Agent Reinforcement Learning for Strategy Optimization in Gomoku
+",105.pdf
+6372234,Safe Multi-Agent Spacecraft Reconfiguration Under Uncertainty,050.pdf,Using LLMs and Monte Carlo Tree Search to Create a Human-Level Codenames Player,040.pdf
+6855474,Finding the 근 (Root) of 바둑 (Go),264.pdf,Dynamic Frequency Band Selection for Radar Operation in the Presence of Interference,066.pdf
+6754362,"BlackJack: Q-Learning, SARSA, and Deep Q-Learning Approaches",010.pdf,PokerBot,034.pdf
+6857314,Rat-AI-touille: Enhancing Multi-Agent Collaboration in Overcooked-AI with Communication,217.pdf,Optimal Water Allocation Strategies,272.pdf
+6754122,SupeRL Mario Bros,222.pdf,Cool Maze Searcher - Reinforcement Learning in 3D Robot Maze Navigation,108.pdf
+6759774,DPO Training for Mathematical Problem Solving,027.pdf,INVENTORY MANAGEMENT WITH Q-LEARNING AND DEEP Q-NETWORKS,236.pdf
+6744613,Q-art Pole,170.pdf,Settling the Odds: AI Agents in Catan,221.pdf
+6416633,Deep Q-Networks with Snake,269.pdf,"Optimizing Personalized Treatment with Markov
+Decision Processes",008.pdf
+6420390,A Markovian Approach to Skincare,025.pdf,RL & Blackjack,160.pdf
+6458306,Daily Task Scheduler,074.pdf,Belief Space Planning under Uncertainty with the Cross-Entropy Method,020.pdf
+6416763,How to form a 2D murmuration? Finding the best strategy of flock formation through reinforcement learning,051.pdf,Optimal Strategies in Penalty Shootouts,151.pdf
+6454861,Ear Training Suite for Music Students,116.pdf,"Department-Side Course Scheduling to Maximize
+Student Satisfaction",022.pdf
+6603772,POMDP Navigation performance for Orienteering,081.pdf,Q-Learning for NFL Play Calling,154.pdf
+6512177,Website Engagement,113.pdf,"Kidney Matching: A Reinforcement Learning Approach
+",209.pdf
+6512052,TikTokRL: Optimizing for TikTok Engagement,075.pdf,RL Approaches to Optimize Supply Chain Dynamics in the Beer Game,048.pdf
+6760804,Learning to Play the Oh Pshaw Card Game using a Reinforcement Learning Agent,033.pdf,Looking Forward To Tetris,002.pdf
+6856319,Settling On A Better Method for Training Catan-Playing Agents,194.pdf,Single- and Multi-Agent Approaches to Equitable MELD-Driven Liver Allocation,114.pdf
+6759741,Dynamic Optimization and Balancing of Winning Strategies in Mahjong Using MCTS,240.pdf,Optimized Satellite Acquisition for Precise LEO GPS Positioning,177.pdf
+6455176,A Study of the AlphaZero Framework Applied to Xiangqi,148.pdf,Application of Reinforcement Learning in Modern Art Game,134.pdf
+6430432,Multi-Stage Adaptive Inference with Cascaded Models: A POMDP Formulation,064.pdf,"Optimizing Retail Pricing Strategies with
+Reinforcement Learning: A Markov Decision
+Process Approach",089.pdf
+6745684,Optimization of Blackjack Strategies Using Reinforcement Learning,255.pdf,Wheel of Fortune as a POMDP,202.pdf
+6755645,Monopoly Masterminds One Tile at a Time,038.pdf,"Sequential Decision-Making for Medical Image Diagnosis
+under Uncertainty",125.pdf
+6683409,Can Q-Learning Learn You-Learning? Reinforcement Learning for Adaptive Quizzing,153.pdf,Adapting Transit Schedules to Daily Ridership Patterns using SARSA,146.pdf
+6682407,Optimizing Rspiratory Management using Markov Decision Processes: A Reinforcement Learning Approach on the MIMIC-IV Dataset,161.pdf,Spades is a POMDP,058.pdf
+6417129,Reinforcement Learning Agents for Settlers of Caton Using PPO,201.pdf,Investigating Emergent Behavior from Socially Inspired Reward Parameters in Iterated Prisoner's Dilemma,265.pdf
+6414999,The Pupper Parkour Challenge and a theoretical framework for hierarchical decision making,112.pdf,Gobbling Up Decisions: Optimizing Pacman Strategy with MDPs,099.pdf
+6842635,Catan Conqueror: Building Bots to Rule the Island,242.pdf,Fruitful Learning: Applying RL Algorithms to Suika Game,164.pdf
+6504487,Exploration and Resource Optimization for Autonomous Rover Missions,133.pdf,Online Path-Planning for Terrain Navigation Using MCTS,115.pdf
+6421747,Imaginary-MCTS: Autonomous Computer Use Agents with Enhanced Online Planning,015.pdf,Optimizing Job Applications Under Uncertainty,043.pdf
+6504275,Anticipating the Odds: A Lookahead Method for Blackjack Actor Development,137.pdf,Robust Path-Planning for Autonomous Drones,263.pdf
+6778086,Introspection for LLM Sampling,207.pdf,Learning Cribbage using a Two-Phase Model,173.pdf
+6417276,Pedagogical Bandits: Online Curriculum Learning for Knowledge Distillation,065.pdf,Ambulance Dispatching  with MCTS,001.pdf
+6418581,Connect Four Conundrum,181.pdf,Using Regression Gradients to Optimize a Simple Policy for Mahjong​,086.pdf
+6429088,Adaptive Mesh Refinement through Deep Reinforcement Learning,036.pdf,Evaluation of Application of Maximum Likeilhood Estimation Models to Mancala,047.pdf
+6751764,Short-Term Memory for Partially Observable Markov Games,204.pdf,Learning Greenification Policies using Markov Decision Processes,095.pdf
+6468549,"Stanford Campus Smart Traffic
+Control",007.pdf,To GNN or to LLM? That is a Risk(y) Question,142.pdf
+6493793,Optimizing Cabo Strategy with Monte Carlo Tree Search Applied to a Novel Game Engine,098.pdf,Autonomous Cruise with Markov Decision Processes,094.pdf
+6848047,Investigating Mathematical Reasoning in Smaller Language Models using Likelihood Ratio Policy Gradient Updates and Beam Search,198.pdf,"Building No-Limit Texas Hold
+‘Em Poker Agents
+with Deep Q-Learning and 
+Proximal Policy Optimization",172.pdf
+6648298,Data-Driven Hurricane Evacuation Policy Optimization,100.pdf,99 Ways to Win Ninety-Nine,152.pdf
+6659649,WORDLE Solver,227.pdf,Q-Learning for Multi-Modal Seaglider Control,138.pdf
+6657522,Turning Pages with Reinforcement: A Markov Decision Process Approach to Book Recommendation,091.pdf,Blokus Bot (Botkus? Blobotkus?),171.pdf
+9612402,AI Want to Be The Very Best,249.pdf,Path to 101: A Guided Q-Learning Simulation for Prime Climb,014.pdf
+6679828,Forward Search Agent for 'Fantastic Bits' Game,179.pdf,Martian Navigation POMDP,035.pdf
+6755729,Algorithmic Trading for IMC Prosperity 2,104.pdf,Inside the Black Box: Bayesian Networks for Contextual Bandit Modeling,067.pdf
+6794426,Optimizing Decision-Making in Open Face Chinese Poker Using Monte Carlo Tree Search,275.pdf,Optimizing Electricity Futures Trading with Reinforcement Learning and Deep Learning Driven Price Forecasting,090.pdf
+6527931,RoboDelivery: A Q-Learning Approach to Autonomous Package Distribution,186.pdf,Developing an AI Agent for Strategic Decision Making in Pokémon Battles Under Uncertainty,136.pdf
+6420137,Trajectory Planning in Unknown Environment,220.pdf,Reinforcement Learning Stacking Strategy for Stock Trading,175.pdf
+6428484,Lima’s Traffic Management Using POMDPs: A Q-Learning Approach for Efficient Control of Urban Traffic Lights,123.pdf,Modeling Mafia with Q-Learning,121.pdf
+6419574,Navigating drones in an 3D minefield,193.pdf,Stock Trading is an MDP: The Importance of State Space Complexity,159.pdf
+6751819,Diagnostic Imaging in Radiology: Developing a Deep Learning Decision Support Tool,243.pdf,Evade me if you can!!,092.pdf
+6605553,The Dual Mandate: Modelling Inflation and Unemployment Uncertainty from Setting the Federal Funds Rate,085.pdf,Blackjack: Playing Optimally Through Q-Learning,187.pdf
+6845513,"Monte Carlo Tree Search for Drone Navigation and Collision Prevention
+",042.pdf,Crack The Board,139.pdf
+6825109,Building Renewable Energy Grids using Monte Carlo Tree Search and Karger's Algorithm,163.pdf,Determining Context-Based Hard-Negative Policies with Online Planning for Biodiversity Monitoring,041.pdf
+6604514,Keeping the Lights On for Campus: Using Deep Q-Learning and MDPs for Discrete and Continuous Micro-Energy Grid Optimization,180.pdf,Reinforcement Wars: Will the Airline or the Passenger Win the Pricing Game?,158.pdf
+6750625,Analysis of Q-Learning and POMDP Frameworks for Optimal Poker Strategies,076.pdf,"Actor-Critic Meta Gradient Learning for Classic
+Control Environments",223.pdf
+6752273,Pandemic Policy Planning in a Noncompliant Population,079.pdf,Optimizing Task Completion Time Updates Using POMDPs,059.pdf
+6752851,Invasive Species,045.pdf,Beyond Luck: Optimal Briscola Strategies via Deep Reinforcement Learning,216.pdf
+6856100,MDP is All You Need,237.pdf,Q-Learning-Driven Actuation for High-Precision Space Trusses,135.pdf
+6856492,"Parkd: Model Free RL for Truck Parking Optimization
+",241.pdf,Tetris: Game Playing Under Uncertainty,031.pdf
+6422903,Reward Prediction Error Under Uncertainty,083.pdf,Best Carpet Seller in Marrakech,149.pdf
+6414938,Autonomous Lunar Landing with Deep Q-Learning,191.pdf,Large language model alignment via two-layer neural network feedback,029.pdf
+9624982,AeroAstro Work-Life Balance: How to Maximize Your AA 228 Quiz Scores,012.pdf,A Decision-Making Model of Multi-target Reaching in Motor Neuroscience,106.pdf
+6138118,What the Farkle!?,017.pdf,AlphaZero Continuous for Car Lateral Control,119.pdf
+6375727,The Optimal Dating Path,252.pdf,Reinforcement Learning Agent for Cine2Nerdle: A Graph-Based Approach,122.pdf
+6337220,MDPs for Fire Response,013.pdf,Transportation Network Maintenance Planning with Reinforcement Learning,185.pdf
+6603323,Discovering Protein Complexes in Protein Interaction Networks Using Q-Learning,109.pdf,Navigating the Star Wars: Deep Reinforcement Learning for Competitive Team Battles!,140.pdf
+6504210,Adaptive Satellite Selection for GNSS Tracking Using Reinforcement Learning,271.pdf,TSUD: Enhancing Stereo Matching Accuracy through Training on Small Uncertainty Data,155.pdf
+6682494,Optimizing Investment Decisions in the Airline Industry Using Random Forest Models,026.pdf,ParkFinder - Tackling Uncertainty in Finding Parking at Stanford University,055.pdf
+6649301,Optimal Shipping Schedules for Collaborating Blood Banks,003.pdf,Over(Q)ooked: Developing Q-Learning Agents for Overcooked,147.pdf
+6683417,Evaluating Wordle Strategies Produced by Monte Carlo Tree Search,021.pdf,"Beyond The Zillow Z-Estimate: PPO-Driven Reinforcement
+Learning for Long-Term Real Estate Portfolio Management",230.pdf
+6649719,Solving Investiture: A Stock Exchange Game,030.pdf,"Flying in the Dark – Drone Swarm Navigation with Uncertain Communication and Vision
+",056.pdf
+6854952,Heads Up Deep Q Hold-em,118.pdf,Training an Up'N Down Agent with DDQN,150.pdf
+6838501,Modeling Stanford Football Betting as a Markov Decision Process,023.pdf,Wordle MCS: An Improved Wordle Solver,062.pdf
+6844479,Autonomous Intersection Control with Monte Carlo tree search,274.pdf,BookFind: A Novel Recommendation Algorithm using Markov Decision Processes,244.pdf
+6685267,Santa Barbara Infrastructure Planning: A Comparison of Q-Learning and Evolutionary Algorithm - Binary Tree Search Policy Optimization,018.pdf,Computational Approaches to Optimize HIV Treatment Strategies Using Synthetic Data,235.pdf
+6765096,"Multi-Robot Navigation Using Sequential Decision
+Making Processes",049.pdf,Securing Carbon Geological Storage: A Sequential Decision Approach for CO2 Monitoring and Leak Detection,256.pdf
+6659530,"Water Contract Purchasing Policies for Drought Resilience
+in Santiago, Chile",174.pdf,Optimizing Sea Lice Management in Norwegian Salmon Aquaculture Using Q-Learning,053.pdf
+6847641,Ataxx of the Monte Carlo: Online and Offline Learning Strategies for an Arcade Game,189.pdf,Adaptive Strategy Optimization for 2048 Using Reinforcement Learning,087.pdf
+6604973,Mastering Pong with Deep Q-Learning,126.pdf,"Learning Speed-Based Binning for CMA Optimization in Walking Prosthetics
+",165.pdf
+6415535,"Adaptive Path Planning for Urban Drone Delivery Under
+Uncertainty",211.pdf,Reinforcement Learning Algorithms for Connect 4,232.pdf
+6493821,Drone Pathfinding,144.pdf,Game of Wordle: AI-Driven Word Guessing,061.pdf
+6452220,Exploring Deep Behavioral Cloning with Synthetic Expert Data for 2048,005.pdf,Play Gomoku Game with Deep Q-Networks,129.pdf
+6504465,"Multi-Method Learning Approaches to Codenames: A Comparative Study of MCTS, Fast Informed Bounds, and Policy Gradient Methods",205.pdf,Freshman Year Class Selection as an MDP,224.pdf
+6509995,Baba Is Who? Using Q-Learning to Categorize Human Learning in a Puzzle Game (almost),251.pdf,Satellite Task Scheduling using Markov Decision Process,215.pdf
+6493796,Playing Battleship Game with Deep Reinforcement Learning,259.pdf,Decentralized Earth Observation Planning in Satellite Constellations,097.pdf
+6503883,Optimizing Strategy for Catching Pokémon in the Safari Zone Minigame,124.pdf,Multi-Robot Path Planning in a Grid World,143.pdf
+6455762,Managing Power Grids During Hurricanes Using Probabilistic Decision-Making,178.pdf,Decision Making Under Uncertainty in Secret Hitler,231.pdf
+6416709,ORRCA: Online Reinforcement for Rapid Cache Adaptation,168.pdf,"TerraSafeRL: Adaptive Single-Agent, Terrain-Aware Wildfire Evacuation with Dynamic Pathfinding",019.pdf
+6417056,"Optimizing Uno with Forward Search RL
+",208.pdf,Ability of DQN Model to Learn Theory of Mind when Playing Hanabi,071.pdf
+6544649,Dealer's Dilemma - Learning To Play Dealer's Choice Poker,077.pdf,A Love Letter to Game Playing,169.pdf
+6443170, Hormone-informed Training Strategies for Female Athletes,073.pdf,The Candy Crusher,117.pdf
+6496201,Can We Improve Educational Intervention Timing with an MDP?,096.pdf,Optimizing Trading Strategies with MDPs,016.pdf
+6684203,Meow-kov Decisions: Reward Functions for an Exploding Kittens MDP,219.pdf,Deep Reinforcement Learning in Robot Object Stacking,233.pdf
+6649737,Navigating the Lunar Surface under Low Visibility Conditions,254.pdf,Deep Q-learning on 3D 2048,261.pdf
+6759026,RL For Self Guided Rocket Landings,196.pdf,Optimized helicopter ambulance routing for stroke patients,072.pdf
+6757799,Employing Monte Carlo Tree Search for Aircraft Collision Avoidance during Temporary Flight Restrictions,157.pdf,PERLHF: Parameter Efficient Reinforcement Learning from Human Feedback,214.pdf
+6751159,RL Options Trading Strategies,070.pdf,Mineswept,120.pdf
+6750354,"Ad-ventures in Bidding: Agents, Bids, and the Fight for Clicks",145.pdf,Dynamical Tasks Planner,212.pdf
+6751748,Tactile Graphics Exploration as a POMDP,246.pdf,Playing with Fireworks: Optimizing Agent Strategy Under Uncertainty in Hanabi,162.pdf
+6533085,WiLDCARD: Winning Liar's Dice with Calculative Agents and Reinforced Decision-Making,258.pdf,"Tiny Brains, Big Gains: Enhancing Multi-Step Reasoning in Compact Models with Branch and Bound",225.pdf
+6503953,Bots and Boxes: AlphaZero for Playing Dots and Boxes,046.pdf,Fast Speculative Decoding using MDPs for Efficient Token Drafting,182.pdf
+6417386,Pitch Perfect: Optimizing Baseball Pitch Selection With Reinforcement Learning,266.pdf,Lunar Landing,183.pdf
+6214594,ADVERSARIAL AUTONOMOUS DRIVERS ON THE YAS MARINA CIRCUIT,093.pdf,Applying MDPs and POMDPs to Enhance Decision-Making in Mario Party,166.pdf
+6652559,Safe Handling of Intersection Events under other agents’ Latent Driving styles (SHIELD),052.pdf,Solving Blackjack with An Infinite Deck with Reinforcement Learning,245.pdf
+6684968,Decision-Making for a Two-Agent Adversarial Game,262.pdf,QRaFT: Quantitative and Risk-Adjusted Framework for Algorithmic Trading,192.pdf
+6683230,UAV Swarm Control Under Uncertainty,068.pdf,Robust Pre-Computed Autonomy for Enceladus Orbilander,238.pdf
+6407153,Implementing Q-learning to Optimize Preflop Poker,111.pdf,Fresh Pages: Dynamic Book Recommendation for Genre Exploration using Monte Carlo Tree Search,239.pdf
+6495865,RoadSense: Intelligent Agents for Traffic Navigation,028.pdf,Bayesian Range Estimation in Heads-Up Poker,167.pdf
+6495815,SmartConnections: Using Q-Learning to Solve The NYT Connections,009.pdf,Hit or Stand?,054.pdf
+6541108,Investment Decision Making,257.pdf,POMDP Knowledge Tracing,128.pdf
+6455230,"Modeling Renewable Energy Transitions as a Markov Decision Process:
+A Q-Learning approach to minimizing fossil-fuel reliance while meeting energy demands",088.pdf,Monadic Hierarchical Planning in Tactical Simulations: A Q-Learning Framework for Strategic Unit Composition and Placement,226.pdf
+6455180,Q-Learning and Model Predictive Control for Drone Wildfire Response,141.pdf,"Shoot First, Think Later? Optimizing Soccer Decision Making with MDPs",273.pdf
+6457811,Reinforcement Earning: RL-based Algorithmic Trading,253.pdf,POMDPs for Cervical Cancer Screening,132.pdf
+6754827,Optimal Policies for Competition Power-Off Landings in Varying Wind Conditions with Markov Decision Processes,276.pdf,Policy Learning for War: Modeling the Modified War Card Game with Markov Decision Processes,103.pdf
+6755156,Predicting Precipitation with Actor-Critic and Long Short-Term Memory,032.pdf,Going Bananas for Uncertainty: Creating a Bananagrams Agent with MCTS,190.pdf
+6394775,Connect4 MCTS Implementation,060.pdf,Guess Who Wins Guess Who?,107.pdf
+6645244,What the Heck is Optimal: MCTS and Q-Learning for Strategic Bidding,210.pdf,Stranded on a Grid: Modeling NYT Strands as an MDP and Solving with MCTS,218.pdf
+6657544,Adaptive Stock Trading with Reinforcement Learning,228.pdf,Q-Learning for Blackjack: Simulation and Strategy Optimization,234.pdf
+6875417,Solving Plants vs Zombies with Monte Carlo Tree Search,176.pdf,MARLCar: Single- vs. Multi-Agent Reinforcement Learning in Car Racing,188.pdf
+6301121,Crafting Basketball Strategies with Reinforcement Learning,250.pdf,Leveraging Q-Learning for Uncertainty within Medical Diagnosis,102.pdf
+6416972,Modeling Human Behavior in Poker,101.pdf,Connect Four Conundrum,181.pdf
+6661106,"Monte Carlo Tree Search for Drone Navigation and Collision Prevention
+",042.pdf,When to Assist and Retrain? Learning Policies for Algorithmic Decision Support,197.pdf
+6418834,Finding the 근 (Root) of 바둑 (Go),264.pdf,Reinforcement Learning Algorithms for Connect 4,232.pdf
+6283664,ASTPrompterRoll,084.pdf,Turning Pages with Reinforcement: A Markov Decision Process Approach to Book Recommendation,091.pdf
+6504168,Autonomous Intersection Control with Monte Carlo tree search,274.pdf,AeroAstro Work-Life Balance: How to Maximize Your AA 228 Quiz Scores,012.pdf
+6827772,The Dual Mandate: Modelling Inflation and Unemployment Uncertainty from Setting the Federal Funds Rate,085.pdf,RoboDelivery: A Q-Learning Approach to Autonomous Package Distribution,186.pdf
+6633906,"BlackJack: Q-Learning, SARSA, and Deep Q-Learning Approaches",010.pdf,Securing Carbon Geological Storage: A Sequential Decision Approach for CO2 Monitoring and Leak Detection,256.pdf
+6336500,"Ad-ventures in Bidding: Agents, Bids, and the Fight for Clicks",145.pdf,Drone Pathfinding,144.pdf
+6544343,Adaptive Mesh Refinement through Deep Reinforcement Learning,036.pdf,TSUD: Enhancing Stereo Matching Accuracy through Training on Small Uncertainty Data,155.pdf
+6473835,Hanabi RL Agent,270.pdf,Decision Making Under Uncertainty in Secret Hitler,231.pdf
+6847945,Optimization of Blackjack Strategies Using Reinforcement Learning,255.pdf,Optimizing Cabo Strategy with Monte Carlo Tree Search Applied to a Novel Game Engine,098.pdf
+6602639,Guess Who Wins Guess Who?,107.pdf,Daily Task Scheduler,074.pdf
+6382761,Q-Learning-Driven Actuation for High-Precision Space Trusses,135.pdf,"Multi-Method Learning Approaches to Codenames: A Comparative Study of MCTS, Fast Informed Bounds, and Policy Gradient Methods",205.pdf
+6433943,Pitch Perfect: Optimizing Baseball Pitch Selection With Reinforcement Learning,266.pdf,Optimizing Sea Lice Management in Norwegian Salmon Aquaculture Using Q-Learning,053.pdf
+6458880,Tetris: Game Playing Under Uncertainty,031.pdf,Decentralized Earth Observation Planning in Satellite Constellations,097.pdf
+6849712,Discovering Protein Complexes in Protein Interaction Networks Using Q-Learning,109.pdf,Safe Multi-Agent Spacecraft Reconfiguration Under Uncertainty,050.pdf
+6931971,What the Heck is Optimal: MCTS and Q-Learning for Strategic Bidding,210.pdf,Anticipating the Odds: A Lookahead Method for Blackjack Actor Development,137.pdf
+6424016,"Sequential Decision-Making for Medical Image Diagnosis
+under Uncertainty",125.pdf,Q-Learning for NFL Play Calling,154.pdf
+6872826,Freshman Year Class Selection as an MDP,224.pdf,"Pick Your Poison: Navigating the Paris Public Transportation System Using Monte Carlo Tree Search
+",082.pdf
+5699947,Gobbling Up Decisions: Optimizing Pacman Strategy with MDPs,099.pdf,Beyond Luck: Optimal Briscola Strategies via Deep Reinforcement Learning,216.pdf
+6077676,To GNN or to LLM? That is a Risk(y) Question,142.pdf,Game of Wordle: AI-Driven Word Guessing,061.pdf
+6603969,Unbeatable Checkers Bot 9000,268.pdf,Keeping the Lights On for Campus: Using Deep Q-Learning and MDPs for Discrete and Continuous Micro-Energy Grid Optimization,180.pdf
+6603001,AI Want to Be The Very Best,249.pdf,Fruitful Learning: Applying RL Algorithms to Suika Game,164.pdf
+6418864,Playing Battleship Game with Deep Reinforcement Learning,259.pdf,Developing an AI Agent for Strategic Decision Making in Pokémon Battles Under Uncertainty,136.pdf
+6399330,Deep Q-Networks with Snake,269.pdf,Optimal Shipping Schedules for Collaborating Blood Banks,003.pdf
+6453681,Q-Learning for Blackjack: Simulation and Strategy Optimization,234.pdf,INVENTORY MANAGEMENT WITH Q-LEARNING AND DEEP Q-NETWORKS,236.pdf
+6841180,Reinforcement Wars: Will the Airline or the Passenger Win the Pricing Game?,158.pdf,Solving Plants vs Zombies with Monte Carlo Tree Search,176.pdf
+6840758,Deep Reinforcement Learning in Robot Object Stacking,233.pdf,"Water Contract Purchasing Policies for Drought Resilience
+in Santiago, Chile",174.pdf
+6828420,WORDLE Solver,227.pdf,Heads Up Deep Q Hold-em,118.pdf
+6757875,Managing Power Grids During Hurricanes Using Probabilistic Decision-Making,178.pdf,Ability of DQN Model to Learn Theory of Mind when Playing Hanabi,071.pdf
+6828403,Blokus Bot (Botkus? Blobotkus?),171.pdf,Drone Path Planning for Optimizing Environmental Neural Radiance Field Creation.,057.pdf
+6649585,Building Renewable Energy Grids using Monte Carlo Tree Search and Karger's Algorithm,163.pdf,Q-Learning for Multi-Modal Seaglider Control,138.pdf
+6451325,Evade me if you can!!,092.pdf,MARLCar: Single- vs. Multi-Agent Reinforcement Learning in Car Racing,188.pdf
+6533704,"Optimizing Personalized Treatment with Markov
+Decision Processes",008.pdf,Optimizing Job Applications Under Uncertainty,043.pdf
+6445366,"Optimal Regatta Sailing Strategy Under Uncertain Wind
+and Competitor Positions",037.pdf,Using Regression Gradients to Optimize a Simple Policy for Mahjong​,086.pdf
+6684468,Dynamical Tasks Planner,212.pdf,Investigating Mathematical Reasoning in Smaller Language Models using Likelihood Ratio Policy Gradient Updates and Beam Search,198.pdf
+6650084,Adapting Transit Schedules to Daily Ridership Patterns using SARSA,146.pdf,RL For Self Guided Rocket Landings,196.pdf
+6650814,POMDP Navigation performance for Orienteering,081.pdf,Rat-AI-touille: Enhancing Multi-Agent Collaboration in Overcooked-AI with Communication,217.pdf
+6420309, Hormone-informed Training Strategies for Female Athletes,073.pdf,Forward Search Agent for 'Fantastic Bits' Game,179.pdf
+6423441,RL Options Trading Strategies,070.pdf,POMDPs for Cervical Cancer Screening,132.pdf
+6484816,Optimal Strategies in Penalty Shootouts,151.pdf,Reinforcement Learning Agent for Cine2Nerdle: A Graph-Based Approach,122.pdf
+6320088,Reinforcement Learning Agents for Settlers of Caton Using PPO,201.pdf,Optimizing Strategy for Catching Pokémon in the Safari Zone Minigame,124.pdf
+6853163,Ambulance Dispatching  with MCTS,001.pdf,Lima’s Traffic Management Using POMDPs: A Q-Learning Approach for Efficient Control of Urban Traffic Lights,123.pdf
+6847796,Optimizing Trading Strategies with MDPs,016.pdf,"Winner Winner Chicken Dinner: Reward Shaping for A2C
+Applied to Atari Freeway",024.pdf
+6481612,ParkFinder - Tackling Uncertainty in Finding Parking at Stanford University,055.pdf,Reinforcement Learning Balancing of an Inverted Pendulum to any Degree,195.pdf
+6604278,Hit or Stand?,054.pdf,Optimized helicopter ambulance routing for stroke patients,072.pdf
+6649191,Connect4 MCTS Implementation,060.pdf,Meow-kov Decisions: Reward Functions for an Exploding Kittens MDP,219.pdf
+50018999,Euchre Bot,199.pdf,Playing with Fireworks: Optimizing Agent Strategy Under Uncertainty in Hanabi,162.pdf
+6749533,Optimized Satellite Acquisition for Precise LEO GPS Positioning,177.pdf,Bots and Boxes: AlphaZero for Playing Dots and Boxes,046.pdf
+6504449,Learning the Art of Persuasion with Online Dialog Policy Planning,080.pdf,The Optimal Dating Path,252.pdf
+6647055,Leveraging Q-Learning for Uncertainty within Medical Diagnosis,102.pdf,Spades is a POMDP,058.pdf
+6649271,Q-Learning for the Secretary Problem,267.pdf,Adaptive Strategy Optimization for 2048 Using Reinforcement Learning,087.pdf
+6843820,Invasive Species,045.pdf,Santa Barbara Infrastructure Planning: A Comparison of Q-Learning and Evolutionary Algorithm - Binary Tree Search Policy Optimization,018.pdf
+6755492,Optimal Policies for Competition Power-Off Landings in Varying Wind Conditions with Markov Decision Processes,276.pdf,Cool Maze Searcher - Reinforcement Learning in 3D Robot Maze Navigation,108.pdf
+6843070,Optimizing Task Completion Time Updates Using POMDPs,059.pdf,Reinforcement Learning with Time Travel,248.pdf
+6657072,Graph Reinforcement Learning for the Traveling Salesman Problem with Stochastic Travel Times,213.pdf,Monopoly Masterminds One Tile at a Time,038.pdf
+6486030,Learning to Play the Oh Pshaw Card Game using a Reinforcement Learning Agent,033.pdf,A Study of the AlphaZero Framework Applied to Xiangqi,148.pdf
+6839864,"Slithering into Smarter Solutions: Winning at SNAKE
+",260.pdf,Martian Navigation POMDP,035.pdf
+6652562,SmartConnections: Using Q-Learning to Solve The NYT Connections,009.pdf,"Tiny Brains, Big Gains: Enhancing Multi-Step Reasoning in Compact Models with Branch and Bound",225.pdf
+6657511,Blackjack: Playing Optimally Through Q-Learning,187.pdf,Tactile Graphics Exploration as a POMDP,246.pdf
+6849902,Solving Investiture: A Stock Exchange Game,030.pdf,Settling On A Better Method for Training Catan-Playing Agents,194.pdf
+6855818,Evaluating Wordle Strategies Produced by Monte Carlo Tree Search,021.pdf,"Optimizing Retail Pricing Strategies with
+Reinforcement Learning: A Markov Decision
+Process Approach",089.pdf
+9606356,"Beyond The Zillow Z-Estimate: PPO-Driven Reinforcement
+Learning for Long-Term Real Estate Portfolio Management",230.pdf,"Building No-Limit Texas Hold
+‘Em Poker Agents
+with Deep Q-Learning and 
+Proximal Policy Optimization",172.pdf
+6848985,A Love Letter to Game Playing,169.pdf,Robust Path-Planning for Autonomous Drones,263.pdf
+6545367,Trajectory Planning in Unknown Environment,220.pdf,Belief Space Planning under Uncertainty with the Cross-Entropy Method,020.pdf
+6470927,Catan Conqueror: Building Bots to Rule the Island,242.pdf,ADVERSARIAL AUTONOMOUS DRIVERS ON THE YAS MARINA CIRCUIT,093.pdf
+6751855,Viewing Hyperparameter Tuning as a Sequential Decision-Making Problem,247.pdf,"Learning Speed-Based Binning for CMA Optimization in Walking Prosthetics
+",165.pdf
+6504232,PokerBot,034.pdf,Reinforcement Earning: RL-based Algorithmic Trading,253.pdf
+6420494,Computational Approaches to Optimize HIV Treatment Strategies Using Synthetic Data,235.pdf,Going Bananas for Uncertainty: Creating a Bananagrams Agent with MCTS,190.pdf
+6455904,"Shoot First, Think Later? Optimizing Soccer Decision Making with MDPs",273.pdf,Evaluation of Application of Maximum Likeilhood Estimation Models to Mancala,047.pdf
+6416712,Crack The Board,139.pdf,Modeling Stanford Football Betting as a Markov Decision Process,023.pdf
+6751519,Optimizing Rspiratory Management using Markov Decision Processes: A Reinforcement Learning Approach on the MIMIC-IV Dataset,161.pdf,"Attitude Determination and Control for a Spacecraft with
+Unreliable State Measurements",063.pdf
+6419968,Short-Term Memory for Partially Observable Markov Games,204.pdf,Molecules as a Language,184.pdf
+6634326,Baba Is Who? Using Q-Learning to Categorize Human Learning in a Puzzle Game (almost),251.pdf,Algorithmic Trading for IMC Prosperity 2,104.pdf
+6299225,The Pupper Parkour Challenge and a theoretical framework for hierarchical decision making,112.pdf,Single- and Multi-Agent Approaches to Equitable MELD-Driven Liver Allocation,114.pdf
+6166490,Pandemic Policy Planning in a Noncompliant Population,079.pdf,Fresh Pages: Dynamic Book Recommendation for Genre Exploration using Monte Carlo Tree Search,239.pdf
+6426954,How to form a 2D murmuration? Finding the best strategy of flock formation through reinforcement learning,051.pdf,Applying MDPs and POMDPs to Enhance Decision-Making in Mario Party,166.pdf
+6281399,Reward Prediction Error Under Uncertainty,083.pdf,Employing Monte Carlo Tree Search for Aircraft Collision Avoidance during Temporary Flight Restrictions,157.pdf
+6856873,Modeling Mafia with Q-Learning,121.pdf,Dealer's Dilemma - Learning To Play Dealer's Choice Poker,077.pdf
+6856157,Best Carpet Seller in Marrakech,149.pdf,"Modeling Renewable Energy Transitions as a Markov Decision Process:
+A Q-Learning approach to minimizing fossil-fuel reliance while meeting energy demands",088.pdf
+6844710,Optimizing Theme Park Experience Using POMDPs,004.pdf,Introspection for LLM Sampling,207.pdf
+6421287,Autonomous Lunar Landing with Deep Q-Learning,191.pdf,RoadSense: Intelligent Agents for Traffic Navigation,028.pdf
+6458279,POMDP Knowledge Tracing,128.pdf,Looking Forward To Tetris,002.pdf
+6605631,"Parkd: Model Free RL for Truck Parking Optimization
+",241.pdf,What the Farkle!?,017.pdf
+6419231,Exploration and Resource Optimization for Autonomous Rover Missions,133.pdf,Wordle MCS: An Improved Wordle Solver,062.pdf
+6744696,Application of Reinforcement Learning in Modern Art Game,134.pdf,Wheel of Fortune as a POMDP,202.pdf
+6022131,RL Approaches to Optimize Supply Chain Dynamics in the Beer Game,048.pdf,Reducing Patient No-Shows through Q-Learning Optimized Scheduling,131.pdf
+6423821,Optimal Water Allocation Strategies,272.pdf,Navigating the Star Wars: Deep Reinforcement Learning for Competitive Team Battles!,140.pdf
+6495722,Adaptive Satellite Selection for GNSS Tracking Using Reinforcement Learning,271.pdf,Satellite Task Scheduling using Markov Decision Process,215.pdf
+6503897,Determining Context-Based Hard-Negative Policies with Online Planning for Biodiversity Monitoring,041.pdf,Stock trading with deep q-learning,130.pdf
+6654124,MDP is All You Need,237.pdf,Implementing Q-learning to Optimize Preflop Poker,111.pdf
+6512341,Crafting Basketball Strategies with Reinforcement Learning,250.pdf,Analysis of Q-Learning and POMDP Frameworks for Optimal Poker Strategies,076.pdf
+6604273,DPO Training for Mathematical Problem Solving,027.pdf,Cracking the Connections Game,078.pdf
+6855134,"Kidney Matching: A Reinforcement Learning Approach
+",209.pdf,"Actor-Critic Meta Gradient Learning for Classic
+Control Environments",223.pdf
+6602548,"""Monkey!"": Blackjack Decision-Making Agent",127.pdf,Modeling Human Behavior in Poker,101.pdf
+6419822,Safe Handling of Intersection Events under other agents’ Latent Driving styles (SHIELD),052.pdf,Ataxx of the Monte Carlo: Online and Offline Learning Strategies for an Arcade Game,189.pdf
+6757890,Multi-Stage Adaptive Inference with Cascaded Models: A POMDP Formulation,064.pdf,"Dual-Agent Reinforcement Learning for Strategy Optimization in Gomoku
+",105.pdf
+6650352,Pedagogical Bandits: Online Curriculum Learning for Knowledge Distillation,065.pdf,99 Ways to Win Ninety-Nine,152.pdf
+6423435,Navigating the Lunar Surface under Low Visibility Conditions,254.pdf,Website Engagement,113.pdf
+9616705,SupeRL Mario Bros,222.pdf,Dynamic Frequency Band Selection for Radar Operation in the Presence of Interference,066.pdf
+6744262,Dynamic Optimization and Balancing of Winning Strategies in Mahjong Using MCTS,240.pdf,Transportation Network Maintenance Planning with Reinforcement Learning,185.pdf
+6606029,Exploring Deep Behavioral Cloning with Synthetic Expert Data for 2048,005.pdf,PERLHF: Parameter Efficient Reinforcement Learning from Human Feedback,214.pdf
+6528163,Q-art Pole,170.pdf,Diagnostic Imaging in Radiology: Developing a Deep Learning Decision Support Tool,243.pdf
+6509528,Solving Blackjack with An Infinite Deck with Reinforcement Learning,245.pdf,Inside the Black Box: Bayesian Networks for Contextual Bandit Modeling,067.pdf
+6753883,Multi-Robot Path Planning in a Grid World,143.pdf,Ear Training Suite for Music Students,116.pdf
+6135725,Navigating drones in an 3D minefield,193.pdf,Decision-Making for a Two-Agent Adversarial Game,262.pdf
+6760620,Predicting Precipitation with Actor-Critic and Long Short-Term Memory,032.pdf,"Multi-Robot Navigation Using Sequential Decision
+Making Processes",049.pdf
+6855242,Autonomous Cruise with Markov Decision Processes,094.pdf,UAV Swarm Control Under Uncertainty,068.pdf
+6330302,Fast Speculative Decoding using MDPs for Efficient Token Drafting,182.pdf,Bayesian Range Estimation in Heads-Up Poker,167.pdf
+6417289,Maestro: Composing Music with Q-Learning,229.pdf,Saccading Through A Visual Scene,156.pdf
+6450702,QRaFT: Quantitative and Risk-Adjusted Framework for Algorithmic Trading,192.pdf,Settling the Odds: AI Agents in Catan,221.pdf
+5966088,Play Gomoku Game with Deep Q-Networks,129.pdf,"TerraSafeRL: Adaptive Single-Agent, Terrain-Aware Wildfire Evacuation with Dynamic Pathfinding",019.pdf
+6504258,Can Q-Learning Learn You-Learning? Reinforcement Learning for Adaptive Quizzing,153.pdf,Adaptive Stock Trading with Reinforcement Learning,228.pdf
+6455413,Stranded on a Grid: Modeling NYT Strands as an MDP and Solving with MCTS,218.pdf,BookFind: A Novel Recommendation Algorithm using Markov Decision Processes,244.pdf
+6451662,MDPs for Fire Response,013.pdf,Deep Q-learning on 3D 2048,261.pdf
+6618536,"Flying in the Dark – Drone Swarm Navigation with Uncertain Communication and Vision
+",056.pdf,Monadic Hierarchical Planning in Tactical Simulations: A Q-Learning Framework for Strategic Unit Composition and Placement,226.pdf
+6610806,Using LLMs and Monte Carlo Tree Search to Create a Human-Level Codenames Player,040.pdf,"Department-Side Course Scheduling to Maximize
+Student Satisfaction",022.pdf
+6756977,"Adaptive Path Planning for Urban Drone Delivery Under
+Uncertainty",211.pdf,A Markovian Approach to Skincare,025.pdf
+6512335,Learning Cribbage using a Two-Phase Model,173.pdf,Optimizing Decision-Making in Open Face Chinese Poker Using Monte Carlo Tree Search,275.pdf
+6417238,Policy Learning for War: Modeling the Modified War Card Game with Markov Decision Processes,103.pdf,Data-Driven Hurricane Evacuation Policy Optimization,100.pdf
+6482450,The Candy Crusher,117.pdf,Q-Learning and Model Predictive Control for Drone Wildfire Response,141.pdf
+6853733,Over(Q)ooked: Developing Q-Learning Agents for Overcooked,147.pdf,Can We Improve Educational Intervention Timing with an MDP?,096.pdf
+6845785,Optimizing Investment Decisions in the Airline Industry Using Random Forest Models,026.pdf,Online Path-Planning for Terrain Navigation Using MCTS,115.pdf
+6836358,Reinforcement Learning Stacking Strategy for Stock Trading,175.pdf,Path to 101: A Guided Q-Learning Simulation for Prime Climb,014.pdf
+6325506,Optimizing Electricity Futures Trading with Reinforcement Learning and Deep Learning Driven Price Forecasting,090.pdf,"Stanford Campus Smart Traffic
+Control",007.pdf
+6417097,Imaginary-MCTS: Autonomous Computer Use Agents with Enhanced Online Planning,015.pdf,Mastering Pong with Deep Q-Learning,126.pdf
+6392952,A Decision-Making Model of Multi-target Reaching in Motor Neuroscience,106.pdf,"Playing Regicide: Optimal Game Play in Uncertain
+Environments",206.pdf
+6367362,Large language model alignment via two-layer neural network feedback,029.pdf,Mineswept,120.pdf
+6378194,Investment Decision Making,257.pdf,Investigating Emergent Behavior from Socially Inspired Reward Parameters in Iterated Prisoner's Dilemma,265.pdf
+6652731,Training an Up'N Down Agent with DDQN,150.pdf,ORRCA: Online Reinforcement for Rapid Cache Adaptation,168.pdf
+6282934,Robust Pre-Computed Autonomy for Enceladus Orbilander,238.pdf,WiLDCARD: Winning Liar's Dice with Calculative Agents and Reinforced Decision-Making,258.pdf
+6496681,Reinforcement Learning Control of Active Suspension System,044.pdf,Stock Trading is an MDP: The Importance of State Space Complexity,159.pdf
+6485473,TikTokRL: Optimizing for TikTok Engagement,075.pdf,Lunar Landing,183.pdf
+6543749,"Optimizing Uno with Forward Search RL
+",208.pdf,Model Based State-Space Planning and EKF for Manipulator Arm Drone Guidance in a Partially Observable Environment,011.pdf
+6934265,AlphaZero Continuous for Car Lateral Control,119.pdf,Learning Greenification Policies using Markov Decision Processes,095.pdf
+6648556,Smart Picks – A Q-Learning Approach to Cinema,039.pdf,RL & Blackjack,160.pdf
+6455771,"Learning Speed-Based Binning for CMA Optimization in Walking Prosthetics
+",165.pdf,"Water Contract Purchasing Policies for Drought Resilience
+in Santiago, Chile",174.pdf
+6854755,Monopoly Masterminds One Tile at a Time,038.pdf,Reinforcement Earning: RL-based Algorithmic Trading,253.pdf

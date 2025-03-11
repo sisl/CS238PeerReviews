@@ -1,7 +1,7 @@
 import pandas as pd
 
 # csv metadata from the final projects submission folder from Gradescope 
-df = pd.read_csv('updated_csvfile.csv')  # Replace with your actual file path
+df = pd.read_csv('submissions/submission_metadata.csv')  # Replace with your actual file path
 
 filtered_df = df[df['Status'] != "Missing"]
 

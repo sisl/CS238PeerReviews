@@ -9,7 +9,7 @@ import pickle
 import sys
 import yaml
 from pathlib import Path
-from PyPDF2 import PdfWriter, PdfReader
+# from PyPDF2 import PdfWriter, PdfReader
 
 
 sys.setrecursionlimit(300000)
@@ -138,6 +138,7 @@ def get_projects_list(students_list):
     df.rename(columns={'Question 2.4 Response': 'auth_4_email'}, inplace=True)
     df.rename(columns={'Question 5 Response': 'file_id'}, inplace=True)
 
+    df["Submission ID"] = df["Submission ID"].astype(int)
     unique_submission_ids = pd.unique(df["Submission ID"]).tolist()
 
     project_file_number = 0
@@ -155,16 +156,26 @@ def get_projects_list(students_list):
 
         project_titles = df_filtered["project_title"].tolist()[0]
         publish = df_filtered["publish"].tolist()[0]
-        pr_exemption = df_filtered["pr_exemption"].tolist()[0]
+        pr_exemption = True if df_filtered["pr_exemption"].tolist()[0] == "Yes" else False
         
         # find file from folder called submissions to file "submissions_id"
-        res = glob(Path("./submissions/") / f"submissions_{id}*")
-        assert len(res) == 1
-        filename = res[0]
-
-        project_file_number += 1
-
-        projects_list.append(Project(project_file_number,filename,project_titles,students[0],students[1],students[2],students[3],publish,pr_exemption))
+        res = list(Path(f"./submissions/submission_{id}").glob("*"))
+        if len(res) == 1:
+            filename = res[0]
+            project_file_number += 1
+            projects_list.append(Project(project_file_number,filename,project_titles,students[0],students[1],students[2],students[3],publish,pr_exemption))
+        
+        elif len(res) > 1:
+            print("Multiple files in submission detected: ")
+            for ii, fn in enumerate(res):
+                print(f"[{ii}]:", fn)
+            select_idx = int(input("Select option: "))
+            filename = res[select_idx]
+            project_file_number += 1
+            projects_list.append(Project(project_file_number,filename,project_titles,students[0],students[1],students[2],students[3],publish,pr_exemption))
+        
+        else:
+            print(f"Submission {id} has no files.")
 
     return projects_list
 
@@ -320,7 +331,8 @@ def write_peer_review_assignments(student_list, projects_list):
             continue
 
         # copy files and rename to new folder
-        shutil.copy(p.filename,"./processed_project_files/"+f"{str(p.project_id).zfill(3)}.pdf")
+        ext = Path(p.filename).suffix
+        shutil.copy(p.filename, f"./processed_project_files/{str(p.project_id).zfill(3)}{ext}")
         
     sids = [s.sid for s in student_list]
     peer_review_1_title = [s.peer_review_1.title for s in student_list]
@@ -390,7 +402,8 @@ def write_permission_to_publish(projects_list):
         if p.permission_to_publish:
             
             # copy files
-            shutil.copy(p.filename,"./publishable_projects/"+f"{str(p.project_id).zfill(3)}.pdf")
+            ext = Path(p.filename).suffix
+            shutil.copy(p.filename, f"./publishable_projects/{str(p.project_id).zfill(3)}{ext}")
             project_titles.append(p.title)
             f_name = f"{str(p.project_id).zfill(3)}.pdf"
             project_filenames.append(f_name)
@@ -450,7 +463,7 @@ def check_equal_dist(student_list,projects_list):
 
         # print(counter)
         if counter == 0:
-            print("zero", p.project_id)
+            print("zero", p.project_id, p.pr_exemption)
         if counter == 1:
             print("one", p.project_id)
         if counter >= 4:
@@ -465,30 +478,36 @@ def run_first():
     student_list = get_student_list()
     projects_list = get_projects_list(student_list)
     assign_peer_reviews(student_list,projects_list)
-    save_assignments(student_list,projects_list,"master_assignments2.pkl")
-    write_peer_review_assignments(student_list)
-
-    write_permission_to_publish(projects_list)
-    print("stop")
-
-# run_first()
-
-
-def run_second():
-    student_list, projects_list = load_assignments("master_assignments2.pkl")
-    for p in projects_list:
-        print(p.auth_1)
-    print(len(projects_list))
-
-    write_master_peer_review_assignments(student_list)
-    # check_equal_dist(student_list, projects_list)
-
+    save_assignments(student_list,projects_list,"master_assignments.pkl")
+    
+    # checks
     helper_check_not_self_assigned(student_list, projects_list)
-
+    # check_equal_dist(student_list, projects_list)
+    
+    # copy files
+    write_peer_review_assignments(student_list, projects_list)
     write_permission_to_publish(projects_list)
-    print("stop")
+    
+    print("Finished Peer Review Assignments.")
 
-run_second()
+run_first()
+
+print("stop")
+# def run_second():
+#     student_list, projects_list = load_assignments("master_assignments.pkl")
+#     for p in projects_list:
+#         print(p.auth_1)
+#     print(len(projects_list))
+
+#     write_master_peer_review_assignments(student_list)
+#     
+
+#     helper_check_not_self_assigned(student_list, projects_list)
+
+#     write_permission_to_publish(projects_list)
+#     print("stop")
+
+# run_second()
 
 
 
