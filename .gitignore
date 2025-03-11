@@ -1,3 +1,6 @@
 submissions/
 publishable_projects/
 processed_project_files/
+
+*.csv
+*.pkl
