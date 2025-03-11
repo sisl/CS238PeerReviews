@@ -545,7 +545,7 @@ run_first()
 
 
 def run_third():
-    student_list, projects_list = load_assignments("master_assignments2.pkl")
+    student_list, projects_list = load_assignments("master_assignments.pkl")
     with open("submission_metadata_PR1.yml","r") as f:
         pr1_metadata = yaml.safe_load(f)
     pr1_list = get_peer_review_list(student_list,projects_list,pr1_metadata,1)
