@@ -210,7 +210,7 @@ def assign_peer_reviews(student_list,projects_list):
     - not same assignment twice
     - not own project
     """
-    print("pre filter length of projects", len(projects_list))
+    print(f"There are a total of {len(projects_list)}.")
     #ONLY CONSIDER PROJECTS THAT ARE OK WITH PEER REVIEW
     filtered_projects_list = []
     for p in projects_list:
@@ -220,7 +220,7 @@ def assign_peer_reviews(student_list,projects_list):
     # if len(projects_list) <= 3:
     #     raise NotImplementedError
     
-    print("length of projects", len(projects_list))
+    print(f"{len(projects_list)} are part of the peer review.")
     current_projects_list = copy(projects_list)
     next_projects_list = copy(projects_list)
     # last_projects_list = copy(projects_list)
