@@ -162,7 +162,7 @@ def get_projects_list(students_list):
         students = [find_student_by_sid(s,students_list) for s in student_ids] + [None] * (4 - len(student_ids))
 
         project_titles = df_filtered["project_title"].tolist()[0]
-        publish = df_filtered["publish"].tolist()[0]
+        publish = True if df_filtered["publish"].tolist()[0] == "Yes" else False
         pr_exemption = True if df_filtered["pr_exemption"].tolist()[0] == "Yes" else False
         
         # find file from folder called submissions to file "submissions_id"
