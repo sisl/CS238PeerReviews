@@ -18,6 +18,14 @@ random.seed(8241)
 # roster_filename = "AA228_Fall_2024_roster.csv" 
 projects_filename = "filtered_roster_for_finalprojects.csv"
 
+# csv metadata from the final projects submission folder from Gradescope 
+df = pd.read_csv('submissions/submission_metadata.csv')  # Replace with your actual file path
+
+filtered_df = df[df['Status'] != "Missing"]
+
+# Save the filtered DataFrame to a new CSV file
+filtered_df.to_csv('filtered_roster_for_finalprojects.csv', index=False)
+
 class Student(object):
     # def __init__(self,first_name,last_name,sid,email,section) -> None:   
     def __init__(self,name,sid,email,section) -> None:
@@ -84,7 +92,6 @@ def get_student_list():
     df = pd.read_csv(projects_filename)
     for i in range(len(df)):
         name = df.iloc[i]["Name"]
-        print(name)
         sid = str(int(df.iloc[i]["Student ID"]))
         email = df.iloc[i]["Email"]
         section = df.iloc[i]["Sections"]
@@ -492,7 +499,6 @@ def run_first():
 
 run_first()
 
-print("stop")
 # def run_second():
 #     student_list, projects_list = load_assignments("master_assignments.pkl")
 #     for p in projects_list:
