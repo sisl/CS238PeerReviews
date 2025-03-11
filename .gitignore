@@ -1,6 +1,9 @@
 submissions/
 publishable_projects/
 processed_project_files/
+aa228_peerrevs/
+peerrevs/
+assigment_4963853_export/
 
 *.csv
 *.pkl
