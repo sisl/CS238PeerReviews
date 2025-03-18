@@ -91,7 +91,7 @@ def get_student_list():
     student_list = []
     df = pd.read_csv(projects_filename)
     for i in range(len(df)):
-        name = df.iloc[i]["Name"]
+        name = df.iloc[i]["First Name"] + " " + df.iloc[i]["Last Name"]
         sid = str(int(df.iloc[i]["Student ID"]))
         email = df.iloc[i]["Email"]
         section = df.iloc[i]["Sections"]
