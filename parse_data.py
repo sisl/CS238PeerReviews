@@ -9,8 +9,15 @@ import pickle
 import sys
 import yaml
 from pathlib import Path
-# from PyPDF2 import PdfWriter, PdfReader
+from PyPDF2 import PdfWriter, PdfReader
 
+assert(len(sys.argv) > 5), ("Usage: parse_data.py [csv file path] [submissions folder path] [peer review folder 1] [peer review folder 2] [run number]\n"
+                            + "Run number: 1 for first run, 2 for second run, 3 for third run.")
+csv_file = sys.argv[1]  # Replace with your CSV file path
+submissions_folder_path = sys.argv[2]  # Replace with the path to the submission folders
+peer_review_folder_1 = sys.argv[3]  # Replace with the path to the peer review folder 1
+peer_review_folder_2 = sys.argv[4]  # Replace with the path to the peer review folder 2
+run_script_number = int(sys.argv[5])  # Run number: 1 for first run, 2 for second run, 3 for third run
 
 sys.setrecursionlimit(300000)
 random.seed(8241)
@@ -19,7 +26,7 @@ random.seed(8241)
 projects_filename = "filtered_roster_for_finalprojects.csv"
 
 # csv metadata from the final projects submission folder from Gradescope 
-df = pd.read_csv('submissions/submission_metadata.csv')  # Replace with your actual file path
+df = pd.read_csv(csv_file)  # Replace with your actual file path
 
 filtered_df = df[df['Status'] != "Missing"]
 
@@ -99,24 +106,24 @@ def get_student_list():
     
     return student_list
 
-# def find_student_by_email(email,student_list):
-#     student = None
-#     if pd.isna(email):
-#         return None
+def find_student_by_email(email,student_list):
+    student = None
+    if pd.isna(email):
+        return None
 
-#     # print('all emails',email)
-#     email = email.rstrip()
+    # print('all emails',email)
+    email = email.rstrip()
 
-#     for s in student_list:
-#         # print(s.email)
-#         if s.email==email:
-#             student = s
-#             return student
+    for s in student_list:
+        # print(s.email)
+        if s.email==email:
+            student = s
+            return student
 
-#     if student is None:
-#         # TODO: FIGURE OUT WHAT'S GOING ON HERE.
-#         print("email", email)
-#         # raise NotImplementedError
+    if student is None:
+        # TODO: FIGURE OUT WHAT'S GOING ON HERE.
+        print("email", email)
+        # raise NotImplementedError
 
 def find_student_by_sid(sid,student_list):
     student = None
@@ -166,7 +173,8 @@ def get_projects_list(students_list):
         pr_exemption = True if df_filtered["pr_exemption"].tolist()[0] == "Yes" else False
         
         # find file from folder called submissions to file "submissions_id"
-        res = list(Path(f"./submissions/submission_{id}").glob("*"))
+        submissions_name = f"submission_{id}"
+        res = list(Path(submissions_folder_path + "/" + submissions_name).glob("*"))
         if len(res) == 1:
             filename = res[0]
             project_file_number += 1
@@ -216,6 +224,8 @@ def assign_peer_reviews(student_list,projects_list):
     for p in projects_list:
         if not p.pr_exemption:
             filtered_projects_list.append(p)
+        else:
+            print(f"Project {p.project_id} is exempt from peer review.")
     projects_list = list(set(filtered_projects_list))
     # if len(projects_list) <= 3:
     #     raise NotImplementedError
@@ -369,29 +379,31 @@ def  write_peer_review_projects(pr1_list,pr2_list,projects_list):
         id = p.project_id
         project_titles.append(title)
         project_ids.append(id)
-        peer_review_filenames.append(id+"_peer_reviews.pdf")
+        peer_review_filenames.append(str(id)+"_peer_reviews.pdf")
 
         peer_review_files = []
         for pr in pr1_list:
             if pr.project == p:
-                peer_review_files.append(os.path.expanduser("~/Github/CS238PeerReviews/export_PR1/" + pr.filename))
+                peer_review_files.append(os.path.expanduser(peer_review_folder_1 + pr.filename))
                 peer_review_list.append(pr)
 
         for pr in pr2_list:
             if pr.project == p:
-                peer_review_files.append(os.path.expanduser("~/Github/CS238PeerReviews/export_PR2/" + pr.filename))
+                peer_review_files.append(os.path.expanduser(peer_review_folder_2 + pr.filename))
 
                 peer_review_list.append(pr)
-        
+
         #write pdf
         output = PdfWriter()
         for prf in peer_review_files:
             infile = PdfReader(prf, 'rb')
-            for i in range(1,len(infile.pages)-1):
+            for i in range(2,len(infile.pages), 2):
                 page = infile.pages[i]
                 output.add_page(page)
-        
-        with open("./processed_peer_reviews/"+id+"_peer_reviews.pdf","wb") as f:
+
+        # If processed peer reviews folder does not exist, create it
+        os.makedirs("./processed_peer_reviews", exist_ok=True)
+        with open("./processed_peer_reviews/"+str(id)+"_peer_reviews.pdf","wb") as f:
             output.write(f)
 
         #write csv
@@ -497,23 +509,19 @@ def run_first():
     
     print("Finished Peer Review Assignments.")
 
-run_first()
+def run_second():
+    student_list, projects_list = load_assignments("master_assignments.pkl")
+    for p in projects_list:
+        print(p.auth_1)
+    print(len(projects_list))
 
-# def run_second():
-#     student_list, projects_list = load_assignments("master_assignments.pkl")
-#     for p in projects_list:
-#         print(p.auth_1)
-#     print(len(projects_list))
+    write_master_peer_review_assignments(student_list)
 
-#     write_master_peer_review_assignments(student_list)
-#     
 
-#     helper_check_not_self_assigned(student_list, projects_list)
+    helper_check_not_self_assigned(student_list, projects_list)
 
-#     write_permission_to_publish(projects_list)
-#     print("stop")
-
-# run_second()
+    write_permission_to_publish(projects_list)
+    print("stop")
 
 
 
@@ -546,16 +554,22 @@ run_first()
 
 def run_third():
     student_list, projects_list = load_assignments("master_assignments.pkl")
-    with open("submission_metadata_PR1.yml","r") as f:
+    with open(peer_review_folder_1 + "/submission_metadata.yml","r") as f:
         pr1_metadata = yaml.safe_load(f)
     pr1_list = get_peer_review_list(student_list,projects_list,pr1_metadata,1)
 
-    with open("submission_metadata_PR2.yml","r") as f:
+    with open(peer_review_folder_2 + "../peer_review2/submission_metadata.yml","r") as f:
         pr2_metadata = yaml.safe_load(f)
     pr2_list = get_peer_review_list(student_list,projects_list,pr2_metadata,2)
     write_peer_review_projects(pr1_list, pr2_list, projects_list)
 
-# run_third()
+
+if run_script_number == 1:
+    run_first()
+elif run_script_number == 2:
+    run_second()
+elif run_script_number == 3:
+    run_third()
 
 # write_permission_to_publish(projects_list)
 # print("stop")
