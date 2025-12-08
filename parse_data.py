@@ -98,7 +98,7 @@ def get_student_list():
     student_list = []
     df = pd.read_csv(projects_filename)
     for i in range(len(df)):
-        name = df.iloc[i]["First Name"] + " " + df.iloc[i]["Last Name"]
+        name = df.iloc[i]["Name"]
         sid = str(int(df.iloc[i]["Student ID"]))
         email = df.iloc[i]["Email"]
         section = df.iloc[i]["Sections"]
@@ -297,7 +297,7 @@ def assign_peer_reviews(student_list,projects_list):
             while not assigned:
                 random.shuffle(current_projects_list)
 
-                if not np.any([current_projects_list[0].auth_1 == s, current_projects_list[0].auth_2 == s, current_projects_list[0].auth_3 == s, current_projects_list[0].auth_4 == s]):
+                if not np.any([current_projects_list[0].auth_1 == s, current_projects_list[0].auth_2 == s, current_projects_list[0].auth_3 == s, current_projects_list[0].auth_4 == s, current_projects_list[0] == s.peer_review_1]):
                     project = current_projects_list.pop(0)
                     s.peer_review_2 = project
                     assigned = True
