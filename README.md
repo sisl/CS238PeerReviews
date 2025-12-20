@@ -1,4 +1,4 @@
-# CS238PeerReviews
+# CS238 Peer Reviews
 Repo that contains all the files for handling the peer reviews for the CS238 final project.
 
 ## Setup
@@ -30,7 +30,7 @@ The script will:
 - Show which projects are exempt from review
 - Alert you if any students are assigned to review the same project twice
 
-**Important:** Verify the summary matches Gradescope for the number of projects submitted and make any manual adjustments for students reviewing the same project twice.
+**Important:** Verify the summary matches Gradescope for the number of projects submitted and make any manual adjustments if students submitted wrong information.
 
 This pass generates:
 - `Peer_review_assignments.csv` - Assignments for students
