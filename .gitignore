@@ -1,14 +1,30 @@
-submissions/
-publishable_projects/
-processed_project_files/
-aa228_peerrevs/
-peerrevs/
-assigment_4963853_export/
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# OS
 .DS_Store
 
+# Gradescope exports and submission data
+submissions/
+assignment_*_export/
+assigment_*/
+assigment_4963853_export/
+pr_1/
+pr_2/
+
+# Script outputs
+publishable_projects/
+processed_project_files/
+processed_peer_reviews/
+aa228_peerrevs/
+peerrevs/
+
+# Generated artifacts
 *.csv
 *.pkl
 *.zip
 *.pdf
-assigment_*/
 *.mp4
+*.yml
