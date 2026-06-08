@@ -10,6 +10,7 @@ import sys
 import yaml
 from pathlib import Path
 from PyPDF2 import PdfWriter, PdfReader
+from PyPDF2.generic import IndirectObject
 
 assert(len(sys.argv) > 5), ("Usage: parse_data.py [csv file path] [submissions folder path] [peer review folder 1] [peer review folder 2] [run number]\n"
                             + "Run number: 1 for first run, 2 for second run, 3 for third run.")
@@ -94,15 +95,27 @@ class PeerReview(object):
         return ""
 
 
+def normalize_student_id(sid):
+    return str(int(sid)).zfill(8)
+
+def get_student_name(row):
+    if "Name" in row.index and pd.notna(row["Name"]):
+        return row["Name"]
+    return f'{row["First Name"]} {row["Last Name"]}'
+
 def get_student_list():
     student_list = []
+    seen_sids = set()
     df = pd.read_csv(projects_filename)
     for i in range(len(df)):
-        name = df.iloc[i]["First Name"] + " " + df.iloc[i]["Last Name"]
-        sid = str(int(df.iloc[i]["Student ID"]))
+        sid = normalize_student_id(df.iloc[i]["Student ID"])
+        if sid in seen_sids:
+            continue
+        seen_sids.add(sid)
+        name = get_student_name(df.iloc[i])
         email = df.iloc[i]["Email"]
         section = df.iloc[i]["Sections"]
-        student_list.append(Student(name,sid,email,section))
+        student_list.append(Student(name, sid, email, section))
     
     return student_list
 
@@ -125,37 +138,30 @@ def find_student_by_email(email,student_list):
         print("email", email)
         # raise NotImplementedError
 
-def find_student_by_sid(sid,student_list):
-    student = None
-    stripped_sid = str(int(sid))
+def find_student_by_sid(sid, student_list):
+    stripped_sid = normalize_student_id(sid)
     for s in student_list:
-        if s.sid==stripped_sid:
-            student = s
-            return student
+        if s.sid == stripped_sid:
+            return s
 
-    if student is None:
-        raise NotImplementedError
+    raise ValueError(f"Student ID {stripped_sid} not found in roster.")
     
         
 
 def get_projects_list(students_list):
     projects_list = []
-    seen_projects = set()
-    # TODO: REMOVE SEEN PROJECTS?
     df = pd.read_csv(projects_filename)
+    # Gradescope question mapping:
+    # Q1 project title, Q2-Q5 author emails, Q7 publish permission, Q8 peer review opt-out, Q9 file upload
     df.rename(columns={'Question 1 Response': 'project_title'}, inplace=True)
-    df.rename(columns={'Question 3 Response': 'publish'}, inplace=True)
-    df.rename(columns={'Question 4 Response': 'pr_exemption'}, inplace=True)
-    df.rename(columns={'Question 2.1 Response': 'auth_1_email'}, inplace=True)
-    df.rename(columns={'Question 2.2 Response': 'auth_2_email'}, inplace=True)
-    df.rename(columns={'Question 2.3 Response': 'auth_3_email'}, inplace=True)
-    df.rename(columns={'Question 2.4 Response': 'auth_4_email'}, inplace=True)
-    df.rename(columns={'Question 5 Response': 'file_id'}, inplace=True)
+    df.rename(columns={'Question 7 Response': 'publish'}, inplace=True)
+    df.rename(columns={'Question 8 Response': 'pr_exemption'}, inplace=True)
 
     df["Submission ID"] = df["Submission ID"].astype(int)
     unique_submission_ids = pd.unique(df["Submission ID"]).tolist()
 
     project_file_number = 0
+    submissions_root = Path(submissions_folder_path)
 
     for id in unique_submission_ids:
 
@@ -166,15 +172,18 @@ def get_projects_list(students_list):
         student_ids = df_filtered["Student ID"].tolist()
 
         # find students by sid
-        students = [find_student_by_sid(s,students_list) for s in student_ids] + [None] * (4 - len(student_ids))
+        students = [find_student_by_sid(s, students_list) for s in student_ids] + [None] * (4 - len(student_ids))
 
         project_titles = df_filtered["project_title"].tolist()[0]
-        publish = True if df_filtered["publish"].tolist()[0] == "Yes" else False
-        pr_exemption = True if df_filtered["pr_exemption"].tolist()[0] == "Yes" else False
+        publish = df_filtered["publish"].tolist()[0] == "Yes"
+        pr_exemption = df_filtered["pr_exemption"].tolist()[0] == "Yes"
         
         # find file from folder called submissions to file "submissions_id"
         submissions_name = f"submission_{id}"
-        res = list(Path(submissions_folder_path + "/" + submissions_name).glob("*"))
+        res = [
+            f for f in (submissions_root / submissions_name).glob("*")
+            if f.is_file() and not f.name.startswith(".")
+        ]
         if len(res) == 1:
             filename = res[0]
             project_file_number += 1
@@ -194,21 +203,26 @@ def get_projects_list(students_list):
 
     return projects_list
 
-def get_peer_review_list(student_list, projects_list, pr_metadata,peer_review_number):
+def get_peer_review_list(student_list, projects_list, pr_metadata, peer_review_number):
     files = list(pr_metadata.keys())
     pr_list = []
     for f in files:
         """Need filename, author, and project"""
-        #get author from email
         submission_email = pr_metadata[f][":submitters"][0][":email"]
-        student = find_student_by_email(submission_email,student_list)
+        student = find_student_by_email(submission_email, student_list)
+        if student is None:
+            print(f"Warning: no roster match for peer review submitter {submission_email} ({f}); skipping.")
+            continue
         if peer_review_number == 1:
             project = student.peer_review_1
-        elif peer_review_number ==2:
+        elif peer_review_number == 2:
             project = student.peer_review_2
         else:
-            raise NotImplementedError
-        pr_list.append(PeerReview(f,student,project))
+            raise ValueError(f"Invalid peer review number: {peer_review_number}")
+        if project is None:
+            print(f"Warning: {student.email} has no peer review {peer_review_number} assignment ({f}); skipping.")
+            continue
+        pr_list.append(PeerReview(f, student, project))
     
     return pr_list
 
@@ -226,7 +240,7 @@ def assign_peer_reviews(student_list,projects_list):
             filtered_projects_list.append(p)
         else:
             print(f"Project {p.project_id} is exempt from peer review.")
-    projects_list = list(set(filtered_projects_list))
+    projects_list = filtered_projects_list
     # if len(projects_list) <= 3:
     #     raise NotImplementedError
     
@@ -328,13 +342,17 @@ def assign_peer_reviews(student_list,projects_list):
 
 def helper_check_not_self_assigned(student_list, projects_list):
     for s in student_list:
+        if s.peer_review_1 is None or s.peer_review_2 is None:
+            print(f"{s.sid} is missing a peer review assignment.")
+            continue
         s_peer_review_1 = s.peer_review_1.project_id
         s_peer_review_2 = s.peer_review_2.project_id
+        s_project = None
         for p in projects_list:
             if np.any([p.auth_1 == s, p.auth_2 == s, p.auth_3 == s, p.auth_4 == s]):
                 s_project = p.project_id
         
-        if s_project == s_peer_review_1 or s_project == s_peer_review_2:
+        if s_project is not None and (s_project == s_peer_review_1 or s_project == s_peer_review_2):
             print(f'{s.sid} is reviewing their own project. {s_project} {s_peer_review_1} {s_peer_review_2}')
         if s_peer_review_1 == s_peer_review_2:
             print(f'{s.sid} is reviewing the same project twice...')
@@ -353,9 +371,15 @@ def write_peer_review_assignments(student_list, projects_list):
         
     sids = [s.sid for s in student_list]
     peer_review_1_title = [s.peer_review_1.title for s in student_list]
-    peer_review_1_filename = [f"{str(s.peer_review_1.project_id).zfill(3)}.pdf" for s in student_list]
+    peer_review_1_filename = [
+        f"{str(s.peer_review_1.project_id).zfill(3)}{Path(s.peer_review_1.filename).suffix}"
+        for s in student_list
+    ]
     peer_review_2_title = [s.peer_review_2.title for s in student_list]
-    peer_review_2_filename = [f"{str(s.peer_review_2.project_id).zfill(3)}.pdf" for s in student_list]
+    peer_review_2_filename = [
+        f"{str(s.peer_review_2.project_id).zfill(3)}{Path(s.peer_review_2.filename).suffix}"
+        for s in student_list
+    ]
     dict = {"Student ID":sids, 
             "Peer Review 1 Title":peer_review_1_title, 
             "Peer Review 1 Filename":peer_review_1_filename,
@@ -364,53 +388,76 @@ def write_peer_review_assignments(student_list, projects_list):
     df = pd.DataFrame(dict)
     df.to_csv("Peer_review_assignments.csv",index=False)
 
-def  write_peer_review_projects(pr1_list,pr2_list,projects_list):
+def page_has_image(page):
+    resources = page.get("/Resources")
+    if not resources:
+        return False
+    if isinstance(resources, IndirectObject):
+        resources = resources.get_object()
+    xobj = resources.get("/XObject")
+    if not xobj:
+        return False
+    if isinstance(xobj, IndirectObject):
+        xobj = xobj.get_object()
+    for key in xobj:
+        obj = xobj[key]
+        if isinstance(obj, IndirectObject):
+            obj = obj.get_object()
+        if obj.get("/Subtype") == "/Image":
+            return True
+    return False
+
+def get_review_page_indices(infile):
+    """Return page indices containing peer review content."""
+    n = len(infile.pages)
+    if n == 0:
+        return []
+    first_text = infile.pages[0].extract_text() or ""
+    if "Graded Peer Review" in first_text:
+        # Page 0 is the Gradescope grade summary; uploaded reviews follow as images.
+        return [i for i in range(1, n) if page_has_image(infile.pages[i])]
+    # Legacy Gradescope export: content on every other page starting at index 2.
+    return list(range(2, n, 2))
+
+def write_peer_review_projects(pr1_list, pr2_list, projects_list):
     project_titles = []
-    project_ids = []
     peer_review_filenames = []
-    peer_review_list =  []
+    pr1_root = Path(peer_review_folder_1)
+    pr2_root = Path(peer_review_folder_2)
+
+    os.makedirs("./processed_peer_reviews", exist_ok=True)
 
     for p in projects_list:
         if p.pr_exemption:
             continue
-        # if p.project_id == "121":
-        #     print("stop")
-        title  = p.title
-        id = p.project_id
+        title = p.title
+        project_id = p.project_id
+        output_filename = f"{project_id}_peer_reviews.pdf"
         project_titles.append(title)
-        project_ids.append(id)
-        peer_review_filenames.append(str(id)+"_peer_reviews.pdf")
+        peer_review_filenames.append(output_filename)
 
         peer_review_files = []
         for pr in pr1_list:
             if pr.project == p:
-                peer_review_files.append(os.path.expanduser(peer_review_folder_1 + pr.filename))
-                peer_review_list.append(pr)
+                peer_review_files.append(pr1_root / pr.filename)
 
         for pr in pr2_list:
             if pr.project == p:
-                peer_review_files.append(os.path.expanduser(peer_review_folder_2 + pr.filename))
+                peer_review_files.append(pr2_root / pr.filename)
 
-                peer_review_list.append(pr)
-
-        #write pdf
         output = PdfWriter()
         for prf in peer_review_files:
-            infile = PdfReader(prf, 'rb')
-            for i in range(2,len(infile.pages), 2):
-                page = infile.pages[i]
-                output.add_page(page)
+            infile = PdfReader(str(prf), 'rb')
+            for i in get_review_page_indices(infile):
+                output.add_page(infile.pages[i])
 
-        # If processed peer reviews folder does not exist, create it
-        os.makedirs("./processed_peer_reviews", exist_ok=True)
-        with open("./processed_peer_reviews/"+str(id)+"_peer_reviews.pdf","wb") as f:
+        with open(f"./processed_peer_reviews/{output_filename}", "wb") as f:
             output.write(f)
 
-        #write csv
-        dict = {"Project Title":project_titles, 
-            "Peer Reviews Filename":peer_review_filenames}
-        df = pd.DataFrame(dict).sort_values("Project Title")
-        df.to_csv("Peer_Reviews_Returned.csv",index=False)     
+    dict = {"Project Title": project_titles,
+            "Peer Reviews Filename": peer_review_filenames}
+    df = pd.DataFrame(dict).sort_values("Project Title")
+    df.to_csv("Peer_Reviews_Returned.csv", index=False)
 
 def write_permission_to_publish(projects_list):
     project_titles = []
@@ -424,7 +471,7 @@ def write_permission_to_publish(projects_list):
             ext = Path(p.filename).suffix
             shutil.copy(p.filename, f"./publishable_projects/{str(p.project_id).zfill(3)}{ext}")
             project_titles.append(p.title)
-            f_name = f"{str(p.project_id).zfill(3)}.pdf"
+            f_name = f"{str(p.project_id).zfill(3)}{ext}"
             project_filenames.append(f_name)
 
     dict = {"Title":project_titles,
@@ -511,17 +558,13 @@ def run_first():
 
 def run_second():
     student_list, projects_list = load_assignments("master_assignments.pkl")
-    for p in projects_list:
-        print(p.auth_1)
-    print(len(projects_list))
+    print(f"Loaded {len(student_list)} students and {len(projects_list)} projects from master_assignments.pkl.")
 
     write_master_peer_review_assignments(student_list)
-
-
     helper_check_not_self_assigned(student_list, projects_list)
-
     write_permission_to_publish(projects_list)
-    print("stop")
+
+    print("Finished Master Peer Review Assignments.")
 
 
 
@@ -554,14 +597,19 @@ def run_second():
 
 def run_third():
     student_list, projects_list = load_assignments("master_assignments.pkl")
-    with open(peer_review_folder_1 + "/submission_metadata.yml","r") as f:
-        pr1_metadata = yaml.safe_load(f)
-    pr1_list = get_peer_review_list(student_list,projects_list,pr1_metadata,1)
+    pr1_metadata_path = Path(peer_review_folder_1) / "submission_metadata.yml"
+    pr2_metadata_path = Path(peer_review_folder_2) / "submission_metadata.yml"
 
-    with open(peer_review_folder_2 + "../peer_review2/submission_metadata.yml","r") as f:
+    with open(pr1_metadata_path, "r") as f:
+        pr1_metadata = yaml.safe_load(f)
+    pr1_list = get_peer_review_list(student_list, projects_list, pr1_metadata, 1)
+
+    with open(pr2_metadata_path, "r") as f:
         pr2_metadata = yaml.safe_load(f)
-    pr2_list = get_peer_review_list(student_list,projects_list,pr2_metadata,2)
+    pr2_list = get_peer_review_list(student_list, projects_list, pr2_metadata, 2)
     write_peer_review_projects(pr1_list, pr2_list, projects_list)
+
+    print("Finished Returning Peer Reviews.")
 
 
 if run_script_number == 1:
